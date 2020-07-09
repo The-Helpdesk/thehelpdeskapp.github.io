@@ -1,4 +1,7 @@
-
+.takeover {
+width: 100vw;
+height: 100vh;
+}
 #sec-2 {
 background-color: #191923;
 padding: 40px;
@@ -45,8 +48,9 @@ padding: 30px;
     font-size: 75px;
     }
     #sec-1, #sec-2, #footer-sec, #sec-3 {
-    height: 1080px;
-    width: auto;
+    height: 100%;
+    width: 100%;
+    padding: 8px;
     }
     #down-arw {
     width: 50px;
@@ -98,3 +102,5 @@ padding: 30px;
     #copyright-header-txt, #legal-learn-more-header-txt {
     font-size: 30px
     }
+
+}
