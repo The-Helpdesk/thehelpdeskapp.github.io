@@ -4,7 +4,7 @@ background-color: #191923;
 padding: 40px;
 }
 html {
-scroll-behavior: "smooth";
+scroll-behavior: smooth;
 }
 #intro-txt {
 color: white;
