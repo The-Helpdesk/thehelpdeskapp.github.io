@@ -28,9 +28,8 @@ color: white;
 border-radius: 15px;
 padding: 30px;
 }
-@media only screen and (min-width: 1000px) {
     body, html {
-    background-color: black;
+    background-color: white;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -99,5 +98,3 @@ padding: 30px;
     #copyright-header-txt, #legal-learn-more-header-txt {
     font-size: 30px
     }
-
-}
