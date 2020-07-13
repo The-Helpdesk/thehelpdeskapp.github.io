@@ -13,25 +13,34 @@ opacity: 0.7;
 </style>
 </head>
 <body id="body">
-<div id="sec-1">
+<script>
+function entrPin() {
+var pin = window.prompt("Please Enter your pin");
+if (pin === '49677'){
+window.alert('Access granted.');
+} else {
+entrPin();
+}}
+entrPin();
+    </script>
+<div id="sec-1"><center>
 <div id="nav-bar">
     <span class="menu-link" id="home-link"><a class="link" href="/index.html">Home</a></span>
 <span class="menu-link" id="web-app-look-link" class="link">Web App: First look</span>
-</div>
+    </div></center> 
 <center>
 <img alt="The Helpdesk Icon" id="bg-header-img" src="./media/images/icons/circular-icons/circular-icon-border.png">
     <div id="bg-header-txt">The Helpdesk</div></center>
     </div>
 <div id="sec-2">
 <div id="bg-cntr-txt-sec2">What does it do?</div>
-<p id="intro-txt">
+<p id="intro-txt"> 
 Every day millions, if not billions of people power on their devices, relying on them to help them communicate and perform up to expectations. But these devices are extremely complicated. Software developers spend years creating complex software for these devices, but technology isn't perfect. Lots of things go wrong with devices and these problems can happen to anyone at any time. What's the solution?  The internet. Well anyone can post on the internet, and that presents problems to consumers looking for support. Software is updated frequently....but the internet doesn't delete outdated articles. That's where the Helpdesk comes in. The Helpdesk is an easy way to get technical help, without all the outdated information and confusion.
 </p>
 </div>
 <div id="sec-3">
-<iframe title="Introducing The Helpdesk" width="99%" height="99%" src="https://www.youtube.com/embed/qjh27JVqD2o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <center><div class="yt-caption" style="color: white;">You can also<a id="yt-vid-link" class="link" href="https://www.youtube.com/embed/qjh27JVqD2o">watch this video on YouTube.</a>See footer for legal information.</div></center>
-</div>
+<iframe title="Introducing The Helpdesk" width="96%" height="99%" src="https://www.youtube.com/embed/qjh27JVqD2o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div> 
 <div id="footer-sec">
     <div id="footer-sec-left" class="sec-bubbles">
     <center><div id="faq-header-txt">FAQs</div></center>
@@ -52,21 +61,21 @@ Every day millions, if not billions of people power on their devices, relying on
     <p class="question-txt" id="question-txt-5">You can use <a class="link" href="https://bit.ly/request-an-article">this link</a> to request articles and <a class="link" href="https://bit.ly/apply-to-write">this link</a> to apply to write for us.</p>
     </div>
     <div id="footer-sec-right" class="sec-bubbles">
-        <div id="contact-header-txt"><center>Contact/Follow</center></div>
+        <div id="contact-header-txt"><center>Contact/Follow</center></div><br>
         <b>Follow us on Instagram:</b>
-        <p>@thehelpdeskapp</p>
+        <p><b><a href="https://www.instagram.com/thehelpdeskapp/">@thehelpdeskapp</a></b></p>
         <b>Find us on Youtube:</b>
-        <p>The Helpdesk</p>
+        <p><b><a class="link" href="https://www.youtube.com/channel/UCn64uW_UVyU5E5Osm7dOtCQ">The Helpdesk</a></b></p>
         <b>Email us:</b>
-        <p>info@thehelpdesk.app</p>
+        <p><b><a class="link" href="mailto:thehelpdesk@thehelpdesk.app">thehelpdesk@thehelpdesk.app</a></b></p>
     </div>
     <div id="footer-sec-right-sub" class="sec-bubbles">
-        <center> <div id="copyright-header-txt">Copyright Notice</div></center>
+        <center> <div id="copyright-header-txt">Copyright Notice</div></center><br>
     Copyright 2020 The Helpdesk under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.<br>
         <center> <a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></center>
     </div>
     <div id="footer-sec-right-sub2" class="sec-bubbles">
-        <center><div id="credit-header-txt">Video Credits</div></center>
+        <center><div id="credit-header-txt">Video Credits</div></center><br>
     <div id="credit-body-txt">
     <b>Music:</b> Lenguas  by Elephant Heart (Licensed to YouTube for user content by to WMG Records)*<br><br>
 <b>Graphics:</b> All the graphics in this video were created by our team and fall under our CC-BY-NC-ND License. Search result screenshots are from Google. The text seen in the articles belongs to the writers of the article. Search results for the example query are subject to change at any time.<br><br>
@@ -74,7 +83,7 @@ Every day millions, if not billions of people power on their devices, relying on
     </div>
     </div>
     <div id="footer-sec-left-sub" class="sec-bubbles">
-        <div id="legal-learn-more-header-txt">Legal</div>
+        <div id="legal-learn-more-header-txt">Legal</div><br>
         <div id="legal-learn-more-body-txt">Visit the <a class="link" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons page</a> to learn how this website and its contents are licensed.</div>
     </div>
 </div>
