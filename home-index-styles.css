@@ -1,16 +1,17 @@
-.takeover {
-width: 100vw;
-height: 100vh;
-}
+
 #sec-2 {
 background-color: #191923;
 padding: 40px;
 }
-html {
+html, body {
 scroll-behavior: smooth;
+overflow-x: none;
+background-color: #191923;
 }
 #intro-txt {
 color: white;
+font-size: 2.5vw;
+padding: 8px;
 }
 #bg-cntr-txt-sec2 {
 text-align: center;
@@ -22,7 +23,7 @@ color: white;
 font-weight: bold;
 }
 #yt-vid-link {
-color: black;
+color: white;
 padding: 10px;
 }
 .sec-bubbles {
@@ -39,17 +40,16 @@ padding: 30px;
     color: #191923;
     }
     #bg-header-img {
-    margin-top: 50px;
-    width: 700px;
-    height: 700px;
+    margin-top: 5%;
+    width: 40%;
     }
     #bg-header-txt {
     margin-top: 15px;
-    font-size: 75px;
+    font-size: 5vw;
     }
     #sec-1, #sec-2, #footer-sec, #sec-3 {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     padding: 8px;
     }
     #down-arw {
@@ -57,29 +57,26 @@ padding: 30px;
     height: 50px;
     align-content: center;
     }
-    #scroll-prompt {
-    margin-top: 50px;
-    }
-    #intro-txt {
-    font-size: 45px;
-    }
     #faq-header-txt, #contact-header-txt {
-    font-size: 100px;
+    font-size: 5vw;
     }
     #bg-cntr-txt-sec2 {
-    font-size: 70px;
+    font-size: 10vw;
     }
     #footer-sec {
-    padding: 30px
+    padding: 30px;
     }
-    #footer-sec-right {
+#footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2 {
+margin-right: 8%;
+}
+#footer-sec-right {
     float: right;
     width: 40%;
     margin-bottom: 30px;
     }
     #footer-sec-left, #footer-sec-left-sub {
     float: left;
-    width: 50%;
+    width: 40%;
     }
     #footer-sec-left-sub {
     margin-top: 30px
@@ -102,5 +99,54 @@ padding: 30px;
     #copyright-header-txt, #legal-learn-more-header-txt {
     font-size: 30px
     }
-
+#sec-1 {
+padding: 0px;
+}
+#sec-3 {
+background-color: #D1000D;
+}
+#nav-bar {
+width: 100vw;
+height: 3%;
+background-color: #191923; 
+color: white;
+font-size: 20px;
+padding: 10px;
+display: table-cell;
+vertical-align: center;
+text-align: center;
+}
+.menu-link {
+padding: 8px;
+display: inline-block;
+}
+@media only screen and (max-width: 500px) {
+#bg-header-img {
+margin-top: 10%;
+width: 90%;
+}
+#footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
+ #footer-sec-left, #footer-sec-left-sub {
+margin-right: 8%;
+width: 70vw;
+float: none;
+margin-top: 8px;
+margin-bottom: 0px;
+}
+#bg-header-txt {
+margin-top: 15px;
+font-size: 14vw;
+}
+#yt-caption {
+font-size: 1px;
+}
+#faq-header-txt {
+font-size: 50px;
+}
+    #intro-txt {
+font-size: 1.2em;
+    }
+    #contact-header-txt {
+    font-size: 2.2em
+    }
 }
