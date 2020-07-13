@@ -4,7 +4,6 @@ background-color: #191923;
 padding: 40px;
 }
 html, body {
-scroll-behavior: smooth;
 overflow-x: hidden;
 background-color: #191923;
 }
