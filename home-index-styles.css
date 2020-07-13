@@ -119,7 +119,7 @@ text-align: center;
 padding: 8px;
 display: inline-block;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
 #bg-header-img {
 margin-top: 10%;
 width: 90%;
