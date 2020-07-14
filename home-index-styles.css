@@ -127,7 +127,7 @@ font-size: 14vw;
 font-size: 5vw;
 color: white;
 }
-#faq-header-txt {
+#faq-header-txt { 
 font-size: 50px;
 }
     #intro-txt {
@@ -139,7 +139,7 @@ font-size: 1.2em;
     #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2 {
     margin-right: 10%;
     }
-}
+}/*
 @media only screen and (max-width: 1300px) {
 #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
  #footer-sec-left, #footer-sec-left-sub {
@@ -151,7 +151,7 @@ margin-bottom: 0px;
     #bg-header-img {
 width: 80%
     }
-}
+}*/
 
 @media only screen and (max-width: 500px) {
 #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
@@ -161,7 +161,6 @@ float: none;
 margin-top: 8px;
 margin-bottom: 0px;
     }
-
 #bg-header-img {
 width: 80%;
     } 
@@ -171,11 +170,11 @@ width: 80%;
     font-size: 4vw;
     }
 }
-@media only screen and (orientation: landscape) and (min-width: 500px) {
+@media only screen and (orientation: portrait) and (min-width: 500px) {
     #bg-header-img {
-width: 50%;
+width: 80%;
     }
     #bg-header-txt {
-font-size: 9vw;
+font-size: 15vw;
     }
 }
