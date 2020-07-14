@@ -33,7 +33,6 @@ color: white;
 border-radius: 15px;
 padding: 30px;
 }
-    }
     #bg-header-img {
     margin-top: 5%;
     width: 40%;
@@ -110,7 +109,7 @@ display: inline-block;
 @media only screen and (max-width: 500px) {
 #bg-header-img {
 margin-top: 10%;
-width: 90%;
+width: 00%;
 }
 #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
  #footer-sec-left, #footer-sec-left-sub {
@@ -159,7 +158,7 @@ margin-bottom: 0px;
     }}
 
 #bg-header-img {
-width: 80%;
+width: 30%;
     }
     #bg-header-txt {
 font-size: 10vw;
