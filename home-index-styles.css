@@ -7,6 +7,11 @@ html, body {
 overflow-x: hidden;
 overflow-y: scroll;
 background-color: #191923;
+background-color: white;
+font-family: 'Montserrat', sans-serif;
+margin: 0;
+padding: 0;
+color: #191923;
 }
 #intro-txt {
 color: white;
@@ -22,22 +27,12 @@ text-decoration: none;
 color: white;
 font-weight: bold;
 }
-#yt-vid-link {
-color: white;
-padding: 10px;
-}
 .sec-bubbles {
 background-color: #191923;
 color: white;
 border-radius: 15px;
 padding: 30px;
 }
-    body, html {
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #191923;
     }
     #bg-header-img {
     margin-top: 5%;
@@ -47,15 +42,10 @@ padding: 30px;
     margin-top: 15px;
     font-size: 5vw;
     }
-    #sec-1, #sec-2, #footer-sec, #sec-3 {
-    height: 100%;
+    #sec-1, #sec-2 {
+    height: 100vh;
     width: 100vw;
     padding: 8px;
-    }
-    #down-arw {
-    width: 50px;
-    height: 50px;
-    align-content: center;
     }
     #faq-header-txt, #contact-header-txt {
     font-size: 5vw;
@@ -102,9 +92,6 @@ width: 95vw;
 #sec-1 {
 padding: 0px;
 }
-#sec-3 {
-background-color: #D1000D;
-}
 #nav-bar {
 width: 105vw;
 height: 3%;
@@ -150,7 +137,7 @@ font-size: 1.2em;
     font-size: 2.2em
     }
     #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2 {
-    margin-right: 8%;
+    margin-right: 10%;
     }
 }
 @media only screen and (max-width: 1300px) {
@@ -171,7 +158,6 @@ margin-top: 8px;
 margin-bottom: 0px;
     }}
 
- @media screen and (orientation:portrait) {
 #bg-header-img {
 width: 80%;
     }
@@ -181,6 +167,6 @@ font-size: 10vw;
 }
 @media only screen and (max-width: 1400px) {
     #intro-txt {
-    font-size: 1em;
+    font-size: 4vw;
     }
 }
