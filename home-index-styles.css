@@ -5,6 +5,7 @@ padding: 40px;
 }
 html, body {
 overflow-x: hidden;
+overflow-y: scroll;
 background-color: #191923;
 }
 #intro-txt {
@@ -148,6 +149,9 @@ font-size: 1.2em;
     #contact-header-txt {
     font-size: 2.2em
     }
+    #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2 {
+    margin-right: 8%;
+    }
 }
 @media only screen and (max-width: 1300px) {
 #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
@@ -173,5 +177,10 @@ width: 80%;
     }
     #bg-header-txt {
 font-size: 10vw;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    #intro-txt {
+    font-size: 1em;
     }
 }
