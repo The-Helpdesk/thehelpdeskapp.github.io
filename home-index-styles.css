@@ -139,19 +139,7 @@ font-size: 1.2em;
     #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2 {
     margin-right: 10%;
     }
-}/*
-@media only screen and (max-width: 1300px) {
-#footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
- #footer-sec-left, #footer-sec-left-sub {
-width: 94%;
-float: none;
-margin-top: 8px;
-margin-bottom: 0px;
-    }
-    #bg-header-img {
-width: 80%
-    }
-}*/
+}
 
 @media only screen and (max-width: 500px) {
 #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
