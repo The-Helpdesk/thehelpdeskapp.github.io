@@ -13,11 +13,27 @@ margin: 0;
 padding: 0;
 color: #191923;
 }
+#sec-4 {
+background-color: #191923;
+color: white;
+padding: 40px;
+}
 #intro-txt {
 color: white;
 font-size: 2.5vw;
 padding: 5%;
 }
+.sec-bubbles {
+background-color: #191923;
+color: white;
+border-radius: 15px;
+padding: 20px;
+margin: 0 auto;
+}
+#footer-sec {  
+width: 90%;
+margin: 0 auto;
+    }
 #bg-cntr-txt-sec2 {
 text-align: center;
 color: white;
@@ -27,19 +43,12 @@ text-decoration: none;
 color: white;
 font-weight: bold;
 }
-.sec-bubbles {
-background-color: #191923;
-color: white;
-border-radius: 15px;
-padding: 30px;
-}
     #bg-header-img {
-    margin-top: 3%;
-    width: 40%;
+width: 40vw;
+margin-top: 1%;
     }
     #bg-header-txt {
-    margin-top: 15px;
-    font-size: 5vw;
+    font-size: 4vw;
     }
     #sec-1, #sec-2 {
     height: 100vh;
@@ -51,9 +60,6 @@ padding: 30px;
     }
     #bg-cntr-txt-sec2 {
     font-size: 10vw;
-    }
-    #footer-sec {
-    padding: 30px;
     }
 #footer-sec-right {
     float: right;
@@ -85,9 +91,6 @@ padding: 30px;
     #copyright-header-txt, #legal-learn-more-header-txt {
     font-size: 30px
     }
-#footer-sec {
-width: 95vw;
-}
 #sec-1 {
 padding: 0px;
 }
@@ -107,59 +110,71 @@ padding: 8px;
 display: inline-block;
 font-weight: 400;
 }
+web-app-txt {
+font-size: 2vw;
+}
 @media only screen and (max-width: 500px) {
-#bg-header-img {
-margin-top: 10%;
-width: 50%;
-}
-#footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
- #footer-sec-left, #footer-sec-left-sub {
-width: 70vw;
-float: none;
-margin-top: 8px;
-margin-bottom: 0px;
-}
-#bg-header-txt {
-margin-top: 15px;
-font-size: 14vw;
-}
-.yt-caption {
-font-size: 5vw;
-color: white;
-}
-#faq-header-txt { 
-font-size: 50px;
-}
+    #bg-header-img {
+        margin-top: 10%;
+        width: 50%;
+    }
+    #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
+    #footer-sec-left, #footer-sec-left-sub {
+        width: 70vw;
+        float: none;
+        margin-top: 8px;
+        margin-bottom: 0px;
+    }
+    #bg-header-txt {
+        margin-top: 15px;
+        font-size: 14vw;
+    }
+    .yt-caption {
+        font-size: 5vw;
+        color: white;
+    }
+    #faq-header-txt { 
+        font-size: 50px;
+    }
     #intro-txt {
-font-size: 1.2em;
+        font-size: 1.2em;
     }
     #contact-header-txt {
-    font-size: 2.2em
+        font-size: 2.2em
     }
     #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2 {
-    margin-right: 10%;
+        margin-right: 10%;
     }
 }
+
 @media only screen and (max-width: 1330px) {
-#footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
- #footer-sec-left, #footer-sec-left-sub {
-width: 95%;
-float: none;
-margin-top: 8px;
-margin-bottom: 0px;
+    #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
+    #footer-sec-left, #footer-sec-left-sub {
+        width: 95%;
+        float: none;
+        border: none;
+        margin: 1% auto;
+        /*margin-right: 3%;*/
     }
+
 }
 @media only screen and (max-width: 500px) {
-#footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
- #footer-sec-left, #footer-sec-left-sub {
-width: 76%;
-float: none;
-margin-top: 8px;
-margin-bottom: 0px;
+    #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
+    #footer-sec-left, #footer-sec-left-sub {
+        width: 90%;
+        float: none;
+        margin: 8px auto;
     }
-#bg-header-img {
-width: 80%;
+    #bg-header-img {
+        width: 80%;
     } 
+    #web-app-descrp-txt {
+    font-size: 4vw;
+    }
+    #web-app-txt {
+    font-size: 4vw;
+    }
+    
 }
 @media only screen and (max-width: 1400px) {
     #intro-txt {
@@ -167,10 +182,13 @@ width: 80%;
     }
 }
 @media only screen and (orientation: portrait) and (min-width: 500px) {
-    #bg-header-img {
-width: 80%;
+   #bg-header-img {
+        width: 80%;
     }
     #bg-header-txt {
-font-size: 15vw;
-    }
+        font-size: 15vw;
+ }
+}
+#footer-sec {
+padding-top: 30px;
 }
