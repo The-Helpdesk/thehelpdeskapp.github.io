@@ -1,0 +1,30 @@
+
+    .dflt-bg, .cat-box, .dflt-bg:hover {
+color: black;
+background: rgba(255, 255, 255, 0.5);
+    }
+    #no-hvr:hover {
+color: black;
+background: rgba(255, 255, 255, 0.5);
+    }
+    a {
+color: black;
+text-decoration: none;
+    }
+    .device-box:hover, .cat-box:hover, .cat-box-featured:hover, .art-name-box:hover, .question:hover, #theme-switch:hover, .dflt-bg:hover {
+background-color: white;
+    }
+.question {
+color: black;
+background: rgba(255, 255, 255, 0.5);
+}
+#device-selection {
+background-color: white;
+color: black;
+}
+.txt-clring {
+color: black;
+}
+.close:hover, .close:focus {
+color: black;
+}

@@ -1,0 +1,142 @@
+[
+    {
+        "cat": "Bluetooth & Wifi",
+        "img": "/media/images/cat-icons/iphone/bluetooth-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Cellular",
+        "img": "/media/images/cat-icons/iphone/cellular-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Display",
+        "img": "/media/images/cat-icons/iphone/display-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Biometrics & Security",
+        "img": "/media/images/cat-icons/iphone/security-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Privacy",
+        "img": "/media/images/cat-icons/iphone/privacy-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Hardware Features",
+        "img": "/media/images/cat-icons/iphone/hardware-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Location Services",
+        "img": "/media/images/cat-icons/iphone/location-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Keyboard",
+        "img": "/media/images/cat-icons/iphone/keyboard-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Accessibility",
+        "img": "/media/images/cat-icons/iphone/accessibility-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "Settings",
+        "img": "/media/images/cat-icons/iphone/settings-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Storage Management",
+        "img": "/media/images/cat-icons/iphone/storage-icon.png",
+        "filter": "system"
+    },
+    {
+        "cat": "App Store",
+        "img": "/media/images/cat-icons/iphone/app-store-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Phone/FaceTime",
+        "img": "/media/images/cat-icons/iphone/face-time-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Camera",
+        "img": "/media/images/cat-icons/iphone/camera-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Maps",
+        "img": "/media/images/cat-icons/iphone/map-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Mail",
+        "img": "/media/images/cat-icons/iphone/mail-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Contacts",
+        "img": "/media/images/cat-icons/iphone/contacts-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Music",
+        "img": "/media/images/cat-icons/iphone/music-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "News",
+        "img": "/media/images/cat-icons/iphone/news-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Files",
+        "img": "/media/images/cat-icons/iphone/files-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Calendar",
+        "img": "/media/images/cat-icons/iphone/calendar-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Home",
+        "img": "/media/images/cat-icons/iphone/home-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Photos",
+        "img": "/media/images/cat-icons/iphone/photos-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Reminders",
+        "img": "/media/images/cat-icons/iphone/reminders-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Shortcuts",
+        "img": "/media/images/cat-icons/iphone/shortcuts-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Apple TV app",
+        "img": "/media/images/cat-icons/iphone/tv-icon.png",
+        "filter": "app"
+    },
+    {
+        "cat": "Apple Pay",
+        "img": "/media/images/cat-icons/iphone/apple-pay-icon.png",
+        "filter": "all"
+    },
+    {
+        "cat": "Other",
+        "img": "/media/images/cat-icons/iphone/other-icon.png",
+        "filter": "all"
+    }
+]

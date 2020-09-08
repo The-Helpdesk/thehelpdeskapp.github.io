@@ -1,0 +1,62 @@
+[
+    {
+        "type": "wifi",
+        "title": "Connect to a Wifi network in settings"
+    },
+    {
+        "type": "bluetooth",
+        "title": "Connect to a Bluetooth device in settings"
+    },
+    {
+        "type": "bluetooth",
+        "title": "Connect to a Bluetooth Device in Control Center"
+    },
+    {
+        "type": "wifi",
+        "title": "Connect to a Wifi network in control center"
+    },
+    {
+        "type": "bluetooth",
+        "title": "Pair game controllers using Bluetooth"
+    },
+    {
+        "type": "bluetooth",
+        "title": "View the batteries of external Bluetooth devices"
+    },
+    {
+        "type": "bluetooth",
+        "title": "Adjust AirPods Settings from the Bluetooth menu"
+    },
+    {
+        "type": "wifi",
+        "title": "Wifi Security types and info required"
+    },
+    {
+        "type": "wifi",
+        "title": "Connect to a network with a hidden SSID"
+    },
+    {
+        "type": "wifi",
+        "title": "Secure networks and how to connect to them"
+    },
+    {
+        "type": "wifi",
+        "title": "Learn how to enable and use Wifi while in Airplane mode"
+    },
+    {
+        "type": "bluetooth",
+        "title": "FAA Rules for using bluetooth while on planes"
+    },
+    {
+        "type": "all",
+        "title": "How to disable wifi or bluetooth from control center"
+    },
+    {
+        "type": "wifi",
+        "title": "How to keep your network data safe"
+    },
+    {
+        "type": "all",
+        "title": "How to disable wifi or bluetooth from settings"
+    }
+]

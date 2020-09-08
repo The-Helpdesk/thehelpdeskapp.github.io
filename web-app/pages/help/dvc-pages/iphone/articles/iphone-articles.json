@@ -1,0 +1,31 @@
+{
+"cncta":   [ 
+    {
+        "step": "1",
+        "text": "XXX"
+    },    
+    {
+        "step": "2",
+        "text": "XXX"
+    },    
+    {
+        "step": "3",
+        "text": "XXX"
+    }
+],
+"cnctb": [
+
+    {
+        "step": "1",
+        "text": "XXX"
+    },    
+    {
+        "step": "2",
+        "text": "XXX"
+    },    
+    {
+        "step": "3",
+        "text": "XXX"
+    }
+]
+}

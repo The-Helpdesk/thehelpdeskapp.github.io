@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles.css">
+<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet">
+<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet">
+<style>
+    html {
+    color: white;
+    }
+    #hero-header {
+font-size: 80px;
+font-weight: 600;
+}
+    .sub-header {
+font-size: 50px;
+font-weight: 200;
+    }
+    input {
+    padding: 3px;
+    }
+    li {
+    list-style: none;
+    }
+</style>
+</head>
+<body>
+<button style="float:left" class="dflt-bg no-out" id="back-btn" onclick="back()">Back</button>
+<center>
+<table>
+<tr>
+<td><button id="color-switch" onclick="switch_bg_color()" class="dflt-bg no-out"><div id="color-box"></div></button></td>
+<td><button id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"></button></td>
+<td><button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"></button></td>
+</tr></table>
+</center>
+<div id="hero-header" class="header">Settings</div>
+<!-- Start settings catogory list -->
+<ul>
+<li><div class="sub-header">General</div>
+<ul>
+<li>
+    <b>Quick Controls Menu:</b>
+<ul>
+    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="search-check" class="bg-styled qc"> Search</label></li><br>
+    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="filter-check" class="bg-styled qc"> Filter</label></li><br>
+    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="about-check" class="bg-styled qc"> About Version</label></li><br>
+    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="bg-check" class="bg-styled qc"> Background color</label></li><br>
+    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="theme-check" class="bg-styled qc"> Theme</label></li><br>
+    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="auto-check" class="bg-styled qc"> Auto Theme</label><br></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="sub-header">Themes</div>
+<!--<ul>
+<li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Red</label></li>
+<li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Orange</label></li>
+<li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Green</label></li>
+<li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Blue</label></li>
+<li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Pink</label></li>
+<li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Purple</label></li>
+</ul>-->
+</li>
+</ul>
+<script>
+sessionStorage.setItem("cur-page","/settings.html");
+</script>
+<script src="prefs.js"></script>
+<script src="pages/help/visuals.js"></script>
+<script src="/universal-scripts.js"></script>
+<script>sessionStorage.setItem("last-page","/settings.html");</script>
+<script>
+//Update the preferences by finding if the preference has changed
+function updateQCPrefs() {
+for (i = 0; i < 6; i++) {
+var cur_check = document.getElementById(qc_checks[i]).checked;
+if (cur_check == false) {
+qc_prefs[i] = "hide";
+try{document.getElementById(qcs[i]).style.display = 'none';}catch(err){console.log(err)}
+} else {
+qc_prefs[i] = "show";
+try{document.getElementById(qcs[i]).style.display = 'inline-block';}catch(err){console.log(err)}
+}
+localStorage.setItem("qc", JSON.stringify(qc_prefs));
+}}
+</script>
+</body>
+</html>

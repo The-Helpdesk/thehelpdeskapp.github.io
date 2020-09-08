@@ -1,0 +1,74 @@
+<html id="html">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../pages/help/web-app-help-universal-styles.css"> 
+<link rel="stylesheet" href="pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet"> 
+<link rel="stylesheet" href="pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet"> 
+<style>
+    #dvc-tbl {
+width: 100%;
+height: 98%;
+table-layout: fixed;
+    }
+    .padded-cell {
+padding: 10px;
+font-size: 20px;
+opacity: 100%;
+    }
+    .device-box {
+color: black;
+width: 100%;
+height: 450px;
+padding: 5px;
+font-weight: bold;
+    }
+    #title {
+color: white;
+text-align: center;
+font-weight: bold;
+font-size: 20px;
+    }
+    #fullspan {
+width: 100%
+    }
+    a {
+color: black;
+text-decoration: none;
+    }
+</style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<center>
+<table>
+<tr>
+<td><button id="v-popup-btn" onclick="showWhatsNew()" class="dflt-bg no-out"><div id="version">v1.0</div></button></td>
+<td><button id="color-switch" onclick="switch_bg_color()" class="dflt-bg no-out"><div id="color-box"></div></button></td>
+<td><button id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"></button></td>
+<td><button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"></button></td>
+</tr></table>
+</center>
+<table id="dvc-tbl">
+<tr>
+    <td class="padded-cell"><a href="pages/help/web-app-help-catogories.html"><div class="cat-box" id="iphone"><img src="media/images/dvc-icons/black-icons/iphone-icon-black.png"><center class="device-box-txt">iPhone</center></div></a></td>
+    <td class="padded-cell"><div class="cat-box" id="ipad"><img src="media/images/dvc-icons/black-icons/ipad-icon-black.png"><center class="device-box-txt">iPad</center></div></td>
+    <td class="padded-cell"><div class="cat-box" id="mac"><img src="media/images/dvc-icons/black-icons/mac-icon-black.png"><center class="device-box-txt">Mac</center></div></td>
+    <td class="padded-cell"><div class="cat-box" id="chromebook"><img src="media/images/dvc-icons/black-icons/chrome-icon-black.png"><center class="device-box-txt">Chromebook</center></div></td>
+    <td class="padded-cell"><div class="cat-box" id="networking"><img src="media/images/dvc-icons/black-icons/network-icon-black.png"><center class="device-box-txt">Networking</center></div></td>
+</tr>
+<tr>
+    <td class="padded-cell"><div class="cat-box" id="pc"><img src="media/images/dvc-icons/black-icons/windows-icon-black.png"><center class="device-box-txt">PC/Windows</center></div></td>
+    <td class="padded-cell"><div class="cat-box" id="android"><img src="media/images/dvc-icons/black-icons/android-icon-black.png"><center class="device-box-txt">Android</center></div></td>
+    <td class="padded-cell"><div class="cat-box" id="tvs"><img src="media/images/dvc-icons/black-icons/tv-icon-black.png"><center class="device-box-txt">Smart TVs</center></div></td>
+    <td class="padded-cell"><div class="cat-box" id="printers"><img src="media/images/dvc-icons/black-icons/printer-icon-black.png"><center class="device-box-txt">Printers</center></div></td>
+    <td class="padded-cell"><div class="cat-box" id="other"><img src="media/images/dvc-icons/black-icons/other-icon-black.png"><center class="device-box-txt">Other/Not listed</center></div></td>
+</tr>
+</table>
+<script>
+sessionStorage.setItem("last-page","pages/help/web-app-help-catogories.html");
+</script>
+<script src="pages/help/visuals.js"></script>
+</body>
+</html>
