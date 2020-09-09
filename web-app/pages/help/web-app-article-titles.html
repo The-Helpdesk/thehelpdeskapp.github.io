@@ -75,10 +75,12 @@ function fetchFunction() {
             })
             .then(function (data) {
                 addCatData(data);
+            console.log("Passed function run")
             });}
         function addCatData(data) {
+            console.log("Adding data")
                 var td = document.createElement("td");
-                tr.appendChild(td);
+                td.appendChild(td);
                 var a = document.createElement("a");
                 a.href = '/';
                 td.appendChild(a)
@@ -93,6 +95,7 @@ function fetchFunction() {
                 img.src = "/web-app/media/images/icons/arrow-icon.svg";
                 span.appendChild(img);
         }
+    fetchFunction();
     </script>
 <script src="/web-app/universal-scripts.js"></script>
 <script src="/web-app/prefs.js"></script>
