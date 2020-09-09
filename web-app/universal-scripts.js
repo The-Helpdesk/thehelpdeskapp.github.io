@@ -38,8 +38,8 @@ if (version_stored != version_displayed) {
 localStorage.setItem('version_stored', version_displayed);
 showWhatsNew();
 }
-}
-fetch('whats-new.json')
+}/*
+fetch('/web-app/whats-new.json')
             .then(function (response) { 
                 return response.json();
             })
@@ -55,4 +55,4 @@ fetch('whats-new.json')
             })
             .catch(function (err) {
                 console.log('error: ' + err);
-            });
+            });*/

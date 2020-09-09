@@ -4,15 +4,15 @@ var page = sessionStorage.getItem("last-page");
 console.log(page)
     console.log('icons dark');
 try {
-document.getElementById('dark-mode').src = 'media/images/icons/dark-mode/dark-mode-on.png';
-document.getElementById('auto-theme').src = 'media/images/icons/dark-mode/auto-theme-white.png';
-document.getElementById('search-icon').src = 'media/images/icons/quick-toggles/search-icon-white.png';
-document.getElementById('filter-icon').src = 'media/images/icons/quick-toggles/filter-icon-white.png';
+document.getElementById('dark-mode').src = '/web-app/media/images/icons/dark-mode/dark-mode-on.png';
+document.getElementById('auto-theme').src = '/web-app/media/images/icons/dark-mode/auto-theme-white.png';
+document.getElementById('search-icon').src = '/web-app/media/images/icons/quick-toggles/search-icon-white.png';
+document.getElementById('filter-icon').src = '/web-app/media/images/icons/quick-toggles/filter-icon-white.png';
 } catch(err) {
 console.log("Error in DarkModeIcons(): " + err);
 }
-if (page == 'index.html') {
-var folder = "media/images/homepage-icons/white/"
+if (page == '/web-app/index.html') {
+var folder = "/web-app/media/images/homepage-icons/white/"
 var file_names = ["get-help","tech-dictionary","partner","edu-enterprise","computer-picker","todays-content","settings"];
 for (i=0;i<7;i++) {
 console.log(folder + file_names[i] + '-black.png')
@@ -24,15 +24,15 @@ function LightModeIcons() {
 var page = sessionStorage.getItem("last-page");
 console.log('icons light')
 try {
-document.getElementById('dark-mode').src = 'media/images/icons/dark-mode/dark-mode-off.png';
-document.getElementById('auto-theme').src = 'media/images/icons/dark-mode/auto-theme-black.png';
-document.getElementById('search-icon').src = 'media/images/icons/quick-toggles/search-icon-black.png';
-document.getElementById('filter-icon').src = 'media/images/icons/quick-toggles/filter-icon-black.png';
+document.getElementById('dark-mode').src = '/web-app/media/images/icons/dark-mode/dark-mode-off.png';
+document.getElementById('auto-theme').src = '/web-app/media/images/icons/dark-mode/auto-theme-black.png';
+document.getElementById('search-icon').src = '/web-app/media/images/icons/quick-toggles/search-icon-black.png';
+document.getElementById('filter-icon').src = '/web-app/media/images/icons/quick-toggles/filter-icon-black.png';
 } catch(err) {
 console.log("Error in LightModeIcons(): " + err);
 }
-if (page == 'index.html') {
-var folder = "media/images/homepage-icons/black/"
+if (page == '/web-app/index.html') {
+var folder = "/web-app/media/images/homepage-icons/black/"
 var file_names = ["get-help","tech-dictionary","partner","edu-enterprise","computer-picker","todays-content","settings"];
 for (i=0;i<7;i++) {
 console.log(folder + file_names[i] + '-black.png')

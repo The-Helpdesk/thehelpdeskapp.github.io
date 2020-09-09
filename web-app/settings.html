@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html id="html">
 <head>
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles.css">
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet">
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet">
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles.css">
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet">
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet">
 <style>
     html {
     color: white;
+    height: 100vh;
     }
     #hero-header {
 font-size: 80px;
@@ -63,13 +64,12 @@ font-weight: 200;
 </ul>-->
 </li>
 </ul>
+<script src="/web-app/prefs.js"></script>
+<script src="/web-app/pages/help/visuals.js"></script>
+<script src="/web-app/universal-scripts.js"></script>
 <script>
-sessionStorage.setItem("cur-page","/settings.html");
+sessionStorage.setItem("last-page","/web-app/settings.html");
 </script>
-<script src="prefs.js"></script>
-<script src="pages/help/visuals.js"></script>
-<script src="/universal-scripts.js"></script>
-<script>sessionStorage.setItem("last-page","/settings.html");</script>
 <script>
 //Update the preferences by finding if the preference has changed
 function updateQCPrefs() {

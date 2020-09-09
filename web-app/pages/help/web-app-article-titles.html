@@ -1,9 +1,9 @@
 <html id="html">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles.css"> 
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet"> 
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet"> 
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles.css"> 
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet"> 
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet"> 
 <style>
     .art-name-box {
 width: 450px;
@@ -61,14 +61,15 @@ var body = document.getElementById('body');
 </center>
 <table><div id="iphone-art-title-boxes"></div></table>
 <script>
-sessionStorage.setItem("last-page","/pages/help/help-index.html");
+sessionStorage.setItem("last-page","/web-app/pages/help/help-index.html");
 </script>
 <script>
+console.log("In FuncA")
 var tdContain = document.getElementById("iphone-art-title-boxes");
 var filter = document.getElementById("filter-field").value;
 console.log("Current Filter: " + filter);
 function fetchFunction() {
-        fetch('/pages/help/dvc-pages/iphone/article-catogories/iphone-bluetooth-wifi.json')
+        fetch('/web-app/pages/help/dvc-pages/iphone/article-catogories/iphone-bluetooth-wifi.json')
             .then(function (response) { 
                 return response.json();
             })
@@ -89,12 +90,12 @@ function fetchFunction() {
                 span.className = "arrow-float";
                 div.appendChild(span);
                 var img = document.createElement("img");
-                img.src = "/media/images/icons/arrow-icon.svg";
+                img.src = "/web-app/media/images/icons/arrow-icon.svg";
                 span.appendChild(img);
         }
     </script>
-<script src="/universal-scripts.js"></script>
-<script src="/prefs.js"></script>
-<script src="/pages/help/visuals.js"></script>
+<script src="/web-app/universal-scripts.js"></script>
+<script src="/web-app/prefs.js"></script>
+<script src="/web-app/pages/help/visuals.js"></script>
     </body>
 </html>

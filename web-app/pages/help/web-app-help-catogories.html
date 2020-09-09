@@ -1,8 +1,8 @@
 <html id="html">
 <head>
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles.css"> 
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet"> 
-<link rel="stylesheet" href="/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet"> 
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles.css"> 
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet"> 
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet"> 
 <style>
     table {
 table-layout: fixed;
@@ -50,7 +50,6 @@ width: 52px;
     <span class="close" onclick="document.getElementById('whats-new-box').style.display = 'none';">&times;</span>
     <div class="popup-header">Welcome to the Helpdesk</div>
     <ul id="popup-header-content">
-    <!--
     <li>Technology help at your fingertips</li>
     <li>All-in-one, trusted source for computer knowledge and support</li>
     <li>Easy access to help- search or browse</li>
@@ -83,7 +82,7 @@ var body = document.getElementById('body');
 <table class="tble-full">
 <tr id="tr-stretch">
 <td valign="bottom" class="cat-box-featured dflt-bg" id="no-hvr">
-<center><img id="phone-img" src="/media/images/cat-icons/glyphs/iphone-8-glyph.png"></center>
+<center><img id="phone-img" src="/web-app/media/images/cat-icons/glyphs/iphone-8-glyph.png"></center>
 <br>
 <b>Select Device</b>
 <br>
@@ -113,8 +112,8 @@ var drpdwnvl = document.getElementById('device-selection').value;
 <td colspan="all" valign="bottom" class="cat-box-featured dflt-bg onhover">
 <center id="plus-icon">+</center><br><b>Featured Quick Read</b><br>Making the most of your phone
 </td>
-<td valign="bottom" class="cat-box-featured dflt-bg onhover"><center><img id="trash-img" src="/media/images/cat-icons/logos/trash-icon.png"></center><b>Useful Tip</b><br>Learn what to do before you get rid of a phone</td>
-<td valign="bottom" class="cat-box-featured dflt-bg onhover"><center><img id="battery-img" src="/media/images/cat-icons/logos/battery-icon.png"></center>
+<td valign="bottom" class="cat-box-featured dflt-bg onhover"><center><img id="trash-img" src="/web-app/media/images/cat-icons/logos/trash-icon.png"></center><b>Useful Tip</b><br>Learn what to do before you get rid of a phone</td>
+<td valign="bottom" class="cat-box-featured dflt-bg onhover"><center><img id="battery-img" src="/web-app/media/images/cat-icons/logos/battery-icon.png"></center>
 <b>Phone Longevity</b><br>Learn how to preserve your battery for a longer lifespan.
 </td>
 </tr>
@@ -123,11 +122,13 @@ var drpdwnvl = document.getElementById('device-selection').value;
 </tr>
 </table>
     <script>
+        console.log("ScriptStart")
         //Modified code from https://howtocreateapps.com/fetch-and-display-json-html-javascript/
         //Fetches icons and names for the correct device
-        fetch('/pages/help/dvc-pages/iphone/iphone-cats.json')
+        fetch('/web-app/pages/help/dvc-pages/iphone/iphone-cats.json')
             .then(function (response) { 
                 return response.json();
+            console.log("Fetch Success")
             })
             .then(function (data) {
                 addCatData(data);
@@ -152,8 +153,8 @@ var drpdwnvl = document.getElementById('device-selection').value;
                 div.className = "cat-box";
                 td.appendChild(div);
                 var a = document.createElement("a");
-                a.className = 'txtclring';
-                a.href = "/pages/help/web-app-article-titles.html"
+                a.classList = 'stretch txtclring';
+                a.href = "/web-app/pages/help/web-app-article-titles.html"
                 div.appendChild(a)
                 var div2 = document.createElement("div");
                 div2.innerHTML = data[i].cat + '<br>';
@@ -181,12 +182,15 @@ var drpdwnvl = document.getElementById('device-selection').value;
                 }
             }}
     </script>
-<script src="/prefs.js"></script>
-<script src="/pages/help/visuals.js"></script>
-<script src="/universal-scripts.js"></script>
+<script>
+sessionStorage.setItem("last-page","/web-app/pages/help/web-app-help-catogories.html");
+</script>
+<script src="/web-app/prefs.js"></script>
+<script src="/web-app/pages/help/visuals.js"></script>
+<script src="/web-app/universal-scripts.js"></script>
 <script>
 function filter() {
- fetch('/pages/help/dvc-pages/iphone/iphone-cats.json')
+ fetch('/we-app/pages/help/dvc-pages/iphone/iphone-cats.json')
             .then(function (response) { 
                 return response.json();
             })
@@ -210,9 +214,6 @@ function filter() {
                 console.log('error: ' + err);
             });
 }
-</script>
-<script>
-sessionStorage.setItem("last-page","/pages/help/web-app-help-catogories.html");
 </script>
 </body>
 </html>

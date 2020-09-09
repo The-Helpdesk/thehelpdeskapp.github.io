@@ -1,4 +1,7 @@
-
+.stretch {
+width: 188px;
+height: inherit;
+}
     .dflt-bg, .cat-box {
 border-radius: 10px;
 transition: 0.7s;
