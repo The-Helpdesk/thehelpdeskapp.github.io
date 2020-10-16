@@ -30,6 +30,19 @@ width: 188px;
 margin: 2px;
 padding: 40px;
 height: auto;
+flex-grow: 4;
+flex-shrink: 2;
+min-width: 0;
+flex-basis: 9%
+    }
+    .dflt-bg {
+    padding: 8px;
+    margin: 8px;
+    }
+    #iphone-cat-boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     }
     .cat-box-featured {
 width: 25%;
@@ -40,11 +53,41 @@ width: 52px;
     .round-img-corners {
     border-radius: 10px
     }
+    #sidebar-container {
+    width: 15vw;
+    height: 100vh;
+    float: left;
+    border-radius: 0px 15px 15px 0px;
+    background-image: url("/media/images/footer-img.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      background-color: grey;
+        background-blend-mode: hard-light;
+    }
+    #body, html {
+    padding: 0;
+    margin: 0;
+    }
+    #sidebar {
+    padding: 10px;
+    }
+    .in-btn-txt {
+     display: inline-block;
+    }
+    #color-box {
+    margin: none;
+    }
+    #color-switch {
+    width: 90%;
+    }
 </style>
 </head>
 <body id="body">
+<!--
 <button style="float:left" class="dflt-bg no-out" id="back-btn" onclick="back()">Back</button>
-<!-- Modified from source: W3 Schools -->
+<!-- Modified from source: W3 Schools
 <div id="whats-new-box" class="popup txtclring">
   <div class="popup-content bgclring">
     <span class="close" onclick="document.getElementById('whats-new-box').style.display = 'none';">&times;</span>
@@ -65,20 +108,28 @@ var body = document.getElementById('body');
     </script>
 <center>
 
-<table>
-<tr>
-<td><div id="search-container" class="dflt-bg"><img id="search-icon"><input placeholder="Search" type="text" id="search-field" class="txtclring" oninput="search();"></div></td>
-<td><div id="filter-container" class="dflt-bg txtclring"><img id="filter-icon"><select onchange="filter();" id="filter-field" class="txtclring">
+</center>
+<div id="sidebar-container">
+<div id="sidebar">
+<div class="dflt-bg group-box">
+<b>Filter &#38; Search</b>
+<div id="search-container" class="dflt-bg"><img id="search-icon"><input placeholder="Search" type="text" id="search-field" class="txtclring" oninput="search();"></div>
+<div id="filter-container" class="dflt-bg txtclring"><img id="filter-icon"><select onchange="filter();" id="filter-field" class="txtclring">
 <option selected>All</option>    
 <option>System</option>
 <option>App</option>
-</select></div></td>
-<td><button id="v-popup-btn" onclick="showWhatsNew()" class="dflt-bg no-out"><div id="version">v1.0</div></button></td>
-<td><button id="color-switch" onclick="switch_bg_color()" class="dflt-bg no-out"><div id="color-box"></div></button></td>
-<td><button id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"></button></td>
-<td><button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"></button></td>
-</tr></table>
-</center>
+</select></div><br>
+    </div>
+<div class="dflt-bg group-box">
+<b>Quick Controls</b><br>
+    <button id="v-popup-btn" onclick="showWhatsNew()" class="dflt-bg no-out"><div><div id="version">&nbsp; v1.0</div><div class="in-btn-txt"><b> See What's New in </b></div></div></button><br>
+    <button id="color-switch" onclick="switch_bg_color()" class="dflt-bg no-out"><div id="color-box"></div><span class="in-btn-txt"><b>Background Color</b></span></button><br>
+<button id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"><b class="in-btn-txt">Switch theme</b></button><br>
+<button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"><b>Reset to Auto-theme</b></button>
+</div>
+</div>
+</div>
+<!--
 <table class="tble-full">
 <tr id="tr-stretch">
 <td valign="bottom" class="cat-box-featured dflt-bg" id="no-hvr">
@@ -109,7 +160,7 @@ var drpdwnvl = document.getElementById('device-selection').value;
 };
 </script>
     </td>
-<td colspan="all" valign="bottom" class="cat-box-featured dflt-bg onhover">
+<!--<td colspan="all" valign="bottom" class="cat-box-featured dflt-bg onhover">
 <center id="plus-icon">+</center><br><b>Featured Quick Read</b><br>Making the most of your phone
 </td>
 <td valign="bottom" class="cat-box-featured dflt-bg onhover"><center><img id="trash-img" src="/web-app/media/images/cat-icons/logos/trash-icon.png"></center><b>Useful Tip</b><br>Learn what to do before you get rid of a phone</td>
@@ -117,10 +168,9 @@ var drpdwnvl = document.getElementById('device-selection').value;
 <b>Phone Longevity</b><br>Learn how to preserve your battery for a longer lifespan.
 </td>
 </tr>
-<tr>
-<table><div id="iphone-cat-boxes"></div></table>
-</tr>
-</table>
+-->
+<div id="iphone-cat-boxes"></div>
+
     <script>
         console.log("ScriptStart")
         //Modified code from https://howtocreateapps.com/fetch-and-display-json-html-javascript/
@@ -141,17 +191,9 @@ var drpdwnvl = document.getElementById('device-selection').value;
             var tdContain = document.getElementById("iphone-cat-boxes");
             //for each piece of data execut the following
             for (var i = 0; i < data.length; i++) {
-                //Check for remainder to see whether a new row needs to be started
-                var ans = i % 7;
-                if (ans === 0) {
-                //If it's a factor of 7 create a new row
-                var tr = document.createElement("tr");
-                tdContain.appendChild(tr)
-                var td = document.createElement("td");
-                tr.appendChild(td);
                 var div = document.createElement("div");
                 div.className = "cat-box";
-                td.appendChild(div);
+                tdContain.appendChild(div);
                 var a = document.createElement("a");
                 a.classList = 'stretch txtclring';
                 a.href = "/web-app/pages/help/web-app-article-titles.html"
@@ -164,22 +206,6 @@ var drpdwnvl = document.getElementById('device-selection').value;
                 img.className = "round-img-corners";
                 img.src = data[i].img;
                 a.appendChild(img);
-                } else {
-                //if it's not a factor of 7 create a new box in the same row
-              var td = document.createElement("td");
-                tr.appendChild(td);
-                var div = document.createElement("div");
-                div.className = "cat-box";
-                td.appendChild(div);
-                var div2 = document.createElement("div");
-                div2.innerHTML = data[i].cat + '<br>';
-                div2.className = 'search-term';
-                div.appendChild(div2)
-                var img = document.createElement("img");
-                img.className = "round-img-corners";
-                img.src = data[i].img;
-                div.appendChild(img);
-                }
             }}
     </script>
 <script>
