@@ -58,13 +58,7 @@ width: 52px;
     height: 100vh;
     float: left;
     border-radius: 0px 15px 15px 0px;
-    background-image: url("/media/images/footer-img.png");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      background-color: grey;
-        background-blend-mode: hard-light;
+    background-color: rgba(255,255,255,0.6)
     }
     #body, html {
     padding: 0;
@@ -79,9 +73,7 @@ width: 52px;
     #color-box {
     margin: none;
     }
-    #color-switch {
-    width: 90%;
-    }
+
 </style>
 </head>
 <body id="body">
@@ -106,12 +98,10 @@ width: 52px;
 <script>
 var body = document.getElementById('body');
     </script>
-<center>
 
-</center>
 <div id="sidebar-container">
-<div id="sidebar">
-<div class="dflt-bg group-box">
+<div id="sidebar-content">
+<div class="dflt-bg group-box" id="no-hvr">
 <b>Filter &#38; Search</b>
 <div id="search-container" class="dflt-bg"><img id="search-icon"><input placeholder="Search" type="text" id="search-field" class="txtclring" oninput="search();"></div>
 <div id="filter-container" class="dflt-bg txtclring"><img id="filter-icon"><select onchange="filter();" id="filter-field" class="txtclring">
@@ -120,15 +110,52 @@ var body = document.getElementById('body');
 <option>App</option>
 </select></div><br>
     </div>
-<div class="dflt-bg group-box">
-<b>Quick Controls</b><br>
-    <button id="v-popup-btn" onclick="showWhatsNew()" class="dflt-bg no-out"><div><div id="version">&nbsp; v1.0</div><div class="in-btn-txt"><b> See What's New in </b></div></div></button><br>
-    <button id="color-switch" onclick="switch_bg_color()" class="dflt-bg no-out"><div id="color-box"></div><span class="in-btn-txt"><b>Background Color</b></span></button><br>
-<button id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"><b class="in-btn-txt">Switch theme</b></button><br>
-<button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"><b>Reset to Auto-theme</b></button>
+<div class="dflt-bg group-box" id="no-hvr">
+<b>Theme Controls</b><br>
+    <button title="Change the background color." id="color-switch" onclick="switch_bg_color()" class="dflt-bg no-out"><div id="color-box"></div></button>
+<button title="Switch between light and dark mode." id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"></button>
+<button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"></button>
+</div>
+<div class="dflt-bg group-box" id="no-hvr">
+<b>Menu</b><br>
+<ul>
+<li>
+Help
+<ul>
+<li>iPhone</li>
+<li>iPad</li>
+<li>Mac</li>
+<li>Chromebook</li>
+<li>Networking</li>
+<li>Windows</li>
+<li>Android</li>
+<li>Smart TVs</li>
+<li>Printers</li>
+<li>Other</li>
+</ul>
+</li>
+<li>
+Tech Dictionary
+</li>
+<li>
+Computer Picker
+</li>
+<li>
+Featured Content
+</li>
+</ul>
+</div>
+<div class="dflt-bg group-box" id="no-hvr">
+    <b>Utilities</b><br>
+     <button title="Show what's new" id="v-popup-btn" onclick="showWhatsNew()" class="dflt-bg no-out"><div><div id="version"> v1.0</div></div></button>
+    <button title="Go to settings" onclick="window.open('/web-app/settings.html','_self')" class="dflt-bg no-out" id="settings-link"><img src="/web-app/media/images/icons/settings-icon.png" id="settings-img"></button>
 </div>
 </div>
 </div>
+<center>
+<b style="color: white;" id="with-script">It looks like we've encountered an error (404). Please try reloading the page.</b><br>
+    <noscript><b style="color: white;" id="no-script">Please enable Javascript in your browser settings.</b></noscript>
+</center>
 <!--
 <table class="tble-full">
 <tr id="tr-stretch">
@@ -216,7 +243,7 @@ sessionStorage.setItem("last-page","/web-app/pages/help/web-app-help-catogories.
 <script src="/web-app/universal-scripts.js"></script>
 <script>
 function filter() {
- fetch('/we-app/pages/help/dvc-pages/iphone/iphone-cats.json')
+ fetch('/web-app/pages/help/dvc-pages/iphone/iphone-cats.json')
             .then(function (response) { 
                 return response.json();
             })
@@ -225,17 +252,27 @@ function filter() {
                 cur_filter = cur_filter.toLowerCase();
                 if (cur_filter == 'system') {
                         for (var i = 0; i < data.length; i++) {
-                            console.log(data[i].filter)
-                            if (data[i].filter == 'system' || data[i].filter == 'all') {
-                                console.log(data[i].filter)
-                                console.log("inloop for " + i + " Filter: " + data[i].filter);
+                            if (data[i].filter == 'app' || data[i].filter == 'all') {
                                 document.getElementsByClassName('cat-box')[i].style.display = 'none';
                             } else {
                             document.getElementsByClassName('cat-box')[i].style.display = '';
                             }
                         }
+                } else if (cur_filter == 'app') {
+                        for (var i = 0; i < data.length; i++) {
+                            console.log(data[i].filter)
+                            if (data[i].filter == 'system' || data[i].filter == 'all') {
+                                document.getElementsByClassName('cat-box')[i].style.display = 'none';
+                            } else {
+                            document.getElementsByClassName('cat-box')[i].style.display = '';
+                            }
+                        }
+                } else {
+                 for (var i = 0; i < data.length; i++) {
+                 document.getElementsByClassName('cat-box')[i].style.display = 'inline-block';
+                 }
                 }
-            })
+                })
          .catch(function (err) {
                 console.log('error: ' + err);
             });

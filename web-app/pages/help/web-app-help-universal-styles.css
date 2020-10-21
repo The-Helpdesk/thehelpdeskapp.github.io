@@ -25,7 +25,7 @@ background-size: cover;
 background-repeat: no-repeat;
 /*overflow: none;
 overflow: hidden;*/
-background-image: linear-gradient(to bottom right, #191923, orange);
+background-image: linear-gradient(to bottom right, #191923, #191923);
 }
     a {
 text-decoration: none;
@@ -118,11 +118,7 @@ font-weight: bold;
 font-size: 25px;
 }
 /* End modified code */
-#dark-mode {
-width: 20px;
-height: auto;
-}
-#auto-theme {
+#dark-mode, #auto-theme, #settings-img {
 width: 20px;
 height: auto;
 }
