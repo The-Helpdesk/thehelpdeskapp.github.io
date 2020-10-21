@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/home-index-styles.css">
+<title>The Helpdesk</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The Helpdesk is an easy way to get technology help at your fingertips.">
-<link rel="icon" rel="/favicon.png">
+<meta name="keywords" content="IT Support, Help, Technology, Technology Help, Tech Help, Information technology, iPhone, iPad, Mac, Chromebook, Android, Networking">
+<meta name="description" content="The Helpdesk- technology help at your fingertips.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Helpdesk">
+<meta property="og:image" content="./media/images/icons/circular-icons/circular-icon-border.png">
+<meta property="og:title" content="Technology help at your fingertips.">
+<link rel="icon" type="image/jpeg" rel="https://thehelpdesk.app/favicon.ico">
+<link rel="stylesheet" href="/home-index-styles.css">
+<link rel="canonical" href="https://thehelpdesk.app/home">
 <link rel="apple-touch-icon" sizes="152x152" href="/media/images/icons/apple-touch-icons/The-Helpdesk-icon-152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/media/images/icons/apple-touch-icons/The-Helpdesk-icon-180.png">
 <link rel="apple-touch-icon" sizes="167x167" href="/media/images/icons/apple-touch-icons/The-Helpdesk-icon-167.png">
-<title>The Helpdesk</title>
 <style>
     #web-app-look-link {
 opacity: 0.7;
@@ -16,41 +22,54 @@ opacity: 0.7;
     #home-link {
 opacity: 1;
     }
+@media (prefers-color-scheme: dark) {
+    body {
+    background-color: black;
+    color: white;
+    }
+    .sec-bubbles {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    }
+    #intro-txt {
+    color: white
+    }
+    a, .link {
+    color: white;
+    }
+    }
 </style>
 </head>
 <body id="body"><main>
-    <div id="sec-1"><center>
+    <div id="sec-1"><!--<center>
 <nav id="nav-bar">
     <span class="menu-link" id="home-link"><a class="link" href="/index.html"><b>Home</b></a></span>
- <!--   <span class="menu-link" id="web-app-look-link" class="link" href="#sec-4"><b>Web App: First look</b></span>-->
-    </nav></center> <center>
-    <img alt="The Helpdesk Icon" id="bg-header-img" src="./media/images/icons/circular-icons/circular-icon-border.png">
+    </nav></center> --><center>
+    <picture>
+  <source id="bg-header-img" type="image/webp" srcset="./media/images/icons/circular-icons/circular-icon-border.webp" alt="The Helpdesk Icon" >
+  <source id="bg-header-img" type="image/jpeg" srcset="./media/images/icons/circular-icons/circular-icon-border.png" alt="the Helpdesk Icon">
+  <img id="bg-header-img" type="image/jpeg" srcset="./media/images/icons/circular-icons/circular-icon-border.png" alt="the Helpdesk Icon">
+</picture>
         <div id="bg-header-txt">The Helpdesk</div></center>
     </div>
 <div id="sec-2">
-<div id="bg-cntr-txt-sec2">What does it do?</div>
-<p id="intro-txt"> 
-Every day millions, if not billions of people power on their devices, relying on them to help them communicate and perform up to expectations. But these devices are extremely complicated. Software developers spend years creating complex software for these devices, but technology isn't perfect. Lots of things go wrong with devices and these problems can happen to anyone at any time. What's the solution?  The internet. Well anyone can post on the internet, and that presents problems to consumers looking for support. Software is updated frequently....but the internet doesn't delete outdated articles. That's where the Helpdesk comes in. The Helpdesk is an easy way to get technical help, without all the outdated information and confusion.
-</p>
-</div>
-<div id="sec-3">
-<video poster="/media/images/introducing-the-helpdesk-poster.png" title="Introducing The Helpdesk" width="100%" height="100%" controls>
+<div class="sec-bubbles" id="info-sec">
+<div id="sub-header">What does it do?</div>
+<div id="intro-txt"> 
+The Helpdesk is an app that allows you to get access to updated, current, and verified technology help, tips, and resources. The solutions in our articles undergo rigorous testing to make sure they work the best and are user intuitive. We stepped into the user's shoes and realized they don't need another login, hard-to-navigate website, or set of complicated instructions. These were the founding principles when we started developing The Helpdesk and we took all of that away when we started building the Helpdesk to provide the best user experience.
+    </div>
+<b id="sub-header">Why did we create The Helpdesk?</b>
+<div id="intro-txt">We started The Helpdesk because we saw a problem in the world: there's no easy way to get technology help. Sure, there are different support sites and apps from companies, but these apps and websites are a second thought that not as much effort goes in too. Most of the time, this leads to a clunky, slow experience that doesn't work for the end-user. There are also lots of community forums to help people; however, these forums get outdated quickly. </div>
+    </div>
+    <div class="sec-bubbles" id="intro-vid">
+<video poster="/media/images/introducing-the-helpdesk-poster.png" title="Introducing The Helpdesk" width="100%" height="auto" controls>
   <source src="/media/videos/introducing-the-helpdesk.mp4" type="video/mp4">
   This video is not compatible with your browser.
-</video>
-</div>
-<div id="sec-4"><center>
-<p>
-    <b id="web-app-txt">Web App: First Look</b><br>
-    <span id="web-app-descrp-txt"> An early look at our Web App coming in the first half of 2021. </span></p></center>
-<video poster="/media/images/web-app-first-look-poster.png" title="Web App: First Look" width="100%" height="100%" controls>
-  <source src="/media/videos/web-app-first-look.mp4" type="video/mp4">
-  This video is not compatible with your browser.
-</video>
+</video></div>
 </div>
 <div id="footer-sec">
-    <div id="footer-sec-left" class="sec-bubbles">
-    <center><div id="faq-header-txt">FAQs</div></center>
+    <div id="faqs" class="sec-bubbles">
+    <div id="faq-header-txt"><b>FAQs</b></div>
        <!--Question 1 -->
     <b class="question-header" id="question-header-1">What's the goal?</b>
     <p class="question-txt" id="question-txt-1">Our goal at the Helpdesk is to provide a way to get technology help without phone calls, chat help, & community forums. We assemble a collection of the highest quality articles from the web and also write our own articles to provide a large library of help that is up to date and easy to understand. When we see new software updates we update our articles to match the new software, and create an archive for legacy articles.</p>
@@ -68,30 +87,34 @@ Every day millions, if not billions of people power on their devices, relying on
     <p class="question-txt" id="question-txt-5">You can use <a class="link" href="https://bit.ly/request-an-article">this link</a> to request articles and <a class="link" href="https://bit.ly/apply-to-write">this link</a> to apply to write for us.</p>
     </div>
     <div id="footer-sec-right" class="sec-bubbles">
-        <div id="contact-header-txt"><center>Contact/Follow</center></div><br>
+        <div id="contact-header-txt"><b>Contact & Follow</b></div><br>
         <div>Follow us on Instagram:</div>
         <p><b><a class="link" href="https://www.instagram.com/thehelpdeskapp/">@thehelpdeskapp</a></b></p>
         <div>Find us on Youtube:</div>
         <p><b><a class="link" href="https://www.youtube.com/channel/UCn64uW_UVyU5E5Osm7dOtCQ">The Helpdesk</a></b></p>
         <div>Email us:</div>
-        <p><b><a class="link" href="mailto:thehelpdesk@thehelpdesk.app">questions@thehelpdesk.app</a></b></p>
+        <p><b><a class="link" href="mailto:questions@thehelpdesk.app">questions@thehelpdesk.app</a></b></p>
     </div>
     <div id="footer-sec-right-sub" class="sec-bubbles">
-        <center> <div id="copyright-header-txt">Copyright Notice</div></center><br>
+        <div id="copyright-header-txt"><b>Copyright & Legal</b></div><br>
+    <b>Copyright Notice</b><br>
     Copyright 2020 The Helpdesk under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.<br>
-        <center> <a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></center>
+<center><a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></center><br>
+   <b>Legal</b><br>
+Visit the <a class="link" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons page</a> to learn how this website and its contents are licensed.
     </div>
     <div id="footer-sec-right-sub2" class="sec-bubbles">
-        <center><div id="credit-header-txt">Video Credits</div></center><br>
+        <div id="credit-header-txt"><b>Credits</b></div><br>
     <div id="credit-body-txt">
-    <b>Music:</b> Lenguas  by Elephant Heart<br><br>
-<b>Graphics:</b> All the graphics in this video were created by our team and fall under our CC-BY-NC-ND License. Search result screenshots are from Google. The text seen in the articles belongs to the writers of the article. Search results for the example query are subject to change at any time.<br><br>
+        <b>Introducing The Helpdesk (Video)</b>
+        <ul><li><b>Music:</b> Lenguas  by Elephant Heart</li><br>
+<li><b>Graphics:</b> All the graphics in this video were created by our team and fall under our CC-BY-NC-ND License. Search result screenshots are from Google. The text seen in the articles belongs to the writers of the article. Search results for the example query are subject to change at any time.<br><br>
+            </li></ul>
+        <b>Background Image</b>
+        <div>The link to the image shown in the background is <a class="link" href="https://www.goodfon.com/wallpaper/green-abstract-simple-waves.html">here.</a> Note: This image has been modified from its orignal source.</div>
     </div>
     </div>
-    <div id="footer-sec-left-sub" class="sec-bubbles">
-        <div id="legal-learn-more-header-txt">Legal</div><br>
-        <div id="legal-learn-more-body-txt">Visit the <a class="link" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons page</a> to learn how this website and its contents are licensed.</div>
-    </div>
+  
     </div>
     </main>
 </body>

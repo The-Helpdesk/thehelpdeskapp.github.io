@@ -1,7 +1,5 @@
-
-#sec-2 {
-background-color: #191923;
-padding: 40px;
+#faqs {
+font-size: 125%;
 }
 html, body {
 overflow-x: hidden;
@@ -18,81 +16,86 @@ background-color: #191923;
 color: white;
 padding: 40px;
 }
+#web-app-look-vid {
+width: 1%;
+height: 80%;
+}
 #intro-txt {
-color: white;
-font-size: 2.5vw;
-padding: 5%;
+color: black;
+font-size: 139%;
+padding: 0.1%;
+}
+#intro-vid {
+height: 50%;
+}
+#sub-header {
+font-weight: bold;
+font-size: 140%;
 }
 .sec-bubbles {
-background-color: #191923;
-color: white;
+background-color: rgba(255,255,255,0.6);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+color: black;
 border-radius: 15px;
+flex-grow: 5;
+flex-shrink: 5;
+flex-basis: 45%;
 padding: 20px;
-margin: 0 auto;
+margin: 10px;
+font-size: 110%;
+min-width: 0;
+width: auto;
 }
-#footer-sec {  
-width: 90%;
-margin: 0 auto;
+#faqs {
+flex-basis: 80%;
+}
+#footer-sec, #sec-2 {  
+width: 100vw;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+background-image: url("/media/images/footer-img.png");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
     }
-#bg-cntr-txt-sec2 {
-text-align: center;
-color: white;
-}
-.link {
+.link, a {
 text-decoration: none;
-color: white;
+color: black;
 font-weight: bold;
+font-size: 100%;
+}
+#mod-sec-bub {
+flex-grow: 5;
+flex-shrink: 5;
+flex-basis: 0%;
 }
     #bg-header-img {
-width: 40vw;
-margin-top: 1%;
+width: 80%;
+margin-top: 5%;
     }
     #bg-header-txt {
-    font-size: 4vw;
+    font-size: 400%;
+    font-weight: 600;
+    padding: 2%;
     }
-    #sec-1, #sec-2 {
-    height: 100vh;
+    #sec-1 {
     width: 100vw;
-    padding: 8px;
+    height: 100vh; 
     }
-    #faq-header-txt, #contact-header-txt {
-    font-size: 5vw;
+    #faq-header-txt, #contact-header-txt, #copyright-header-txt {
+    font-size: 150%;
     }
-    #bg-cntr-txt-sec2 {
-    font-size: 10vw;
-    }
-#footer-sec-right {
-    float: right;
-    width: 45%;
-    margin-bottom: 30px;
-    }
-    #footer-sec-left, #footer-sec-left-sub {
-    float: left;
-    width: 45%;
-    }
-    #footer-sec-left-sub {
-    margin-top: 30px
-    }
-    #footer-sec-right-sub {
-    float: right;
-    width: 45%;
-    }
-    #license {
-    margin-top: 10px;
-    }
-    #footer-sec-right-sub2 {
-    float: right;
-    margin-top: 30px;
-    width: 45%;
-    }
+
     #credit-header-txt {
     font-size: 35px;
     }
-    #copyright-header-txt, #legal-learn-more-header-txt {
-    font-size: 30px
-    }
-#sec-1 {
-padding: 0px;
+video {
+border-radius: 15px;
+object-fit: fill;
+outline: none;
 }
 #nav-bar {
 width: 105vw;
@@ -110,85 +113,8 @@ padding: 8px;
 display: inline-block;
 font-weight: 400;
 }
-web-app-txt {
-font-size: 2vw;
-}
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 900px) {
     #bg-header-img {
-        margin-top: 10%;
-        width: 50%;
+    width: 40%;
     }
-    #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
-    #footer-sec-left, #footer-sec-left-sub {
-        width: 70vw;
-        float: none;
-        margin-top: 8px;
-        margin-bottom: 0px;
-    }
-    #bg-header-txt {
-        margin-top: 15px;
-        font-size: 14vw;
-    }
-    .yt-caption {
-        font-size: 5vw;
-        color: white;
-    }
-    #faq-header-txt { 
-        font-size: 50px;
-    }
-    #intro-txt {
-        font-size: 1.2em;
-    }
-    #contact-header-txt {
-        font-size: 2.2em
-    }
-    #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2 {
-        margin-right: 10%;
-    }
-}
-
-@media only screen and (max-width: 1330px) {
-    #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
-    #footer-sec-left, #footer-sec-left-sub {
-        width: 95%;
-        float: none;
-        border: none;
-        margin: 1% auto;
-        /*margin-right: 3%;*/
-    }
-
-}
-@media only screen and (max-width: 500px) {
-    #footer-sec-right, #footer-sec-right-sub, #footer-sec-right-sub2,
-    #footer-sec-left, #footer-sec-left-sub {
-        width: 90%;
-        float: none;
-        margin: 8px auto;
-    }
-    #bg-header-img {
-        width: 80%;
-    } 
-    #web-app-descrp-txt {
-    font-size: 4vw;
-    }
-    #web-app-txt {
-    font-size: 4vw;
-    }
-    
-}
-@media only screen and (max-width: 1400px) {
-    #intro-txt {
-    font-size: auto;
-    }
-}
-@media only screen and (orientation: portrait) and (min-width: 500px) {
-   #bg-header-img {
-        width: 80%;
-    }
-    #bg-header-txt {
-        font-size: 15vw;
- }
-}
-#footer-sec {
-padding-top: 30px;
 }
