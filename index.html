@@ -11,10 +11,12 @@
 <meta property="og:title" content="Technology help at your fingertips.">
 <link rel="icon" type="image/jpeg" rel="https://thehelpdesk.app/favicon.ico">
 <link rel="stylesheet" href="/home-index-styles.css">
+<link rel="stylesheet" href="./animations.css">
 <link rel="canonical" href="https://thehelpdesk.app/home">
 <link rel="apple-touch-icon" sizes="152x152" href="/media/images/icons/apple-touch-icons/The-Helpdesk-icon-152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/media/images/icons/apple-touch-icons/The-Helpdesk-icon-180.png">
 <link rel="apple-touch-icon" sizes="167x167" href="/media/images/icons/apple-touch-icons/The-Helpdesk-icon-167.png">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
     #web-app-look-link {
 opacity: 0.7;
@@ -53,7 +55,7 @@ opacity: 1;
         <div id="bg-header-txt">The Helpdesk</div></center>
     </div>
 <div id="sec-2">
-<div class="sec-bubbles" id="info-sec">
+<div class="sec-bubbles" id="info-sec" data-aos="fade-up" data-aos-offset="500" data-aos-duration="800">
 <div id="sub-header">What does it do?</div>
 <div id="intro-txt"> 
 The Helpdesk is an app that allows you to get access to updated, current, and verified technology help, tips, and resources. The solutions in our articles undergo rigorous testing to make sure they work the best and are user intuitive. We stepped into the user's shoes and realized they don't need another login, hard-to-navigate website, or set of complicated instructions. These were the founding principles when we started developing The Helpdesk and we took all of that away when we started building the Helpdesk to provide the best user experience.
@@ -61,14 +63,14 @@ The Helpdesk is an app that allows you to get access to updated, current, and ve
 <b id="sub-header">Why did we create The Helpdesk?</b>
 <div id="intro-txt">We started The Helpdesk because we saw a problem in the world: there's no easy way to get technology help. Sure, there are different support sites and apps from companies, but these apps and websites are a second thought that not as much effort goes in too. Most of the time, this leads to a clunky, slow experience that doesn't work for the end-user. There are also lots of community forums to help people; however, these forums get outdated quickly. </div>
     </div>
-    <div class="sec-bubbles" id="intro-vid">
+    <div class="sec-bubbles" id="intro-vid" data-aos="fade-up" data-aos-offset="500" data-aos-duration="800">
 <video poster="/media/images/introducing-the-helpdesk-poster.png" title="Introducing The Helpdesk" width="100%" height="auto" controls>
   <source src="/media/videos/introducing-the-helpdesk.mp4" type="video/mp4">
   This video is not compatible with your browser.
 </video></div>
 </div>
 <div id="footer-sec">
-    <div id="faqs" class="sec-bubbles">
+    <div id="faqs" class="sec-bubbles" data-aos="fade-up" data-aos-offset="500" data-aos-duration="800">
     <div id="faq-header-txt"><b>FAQs</b></div>
        <!--Question 1 -->
     <b class="question-header" id="question-header-1">What's the goal?</b>
@@ -86,7 +88,7 @@ The Helpdesk is an app that allows you to get access to updated, current, and ve
     <b class="question-header" id="question-header-5">How can I request an article or apply to write articles?</b>
     <p class="question-txt" id="question-txt-5">You can use <a class="link" href="https://bit.ly/request-an-article">this link</a> to request articles and <a class="link" href="https://bit.ly/apply-to-write">this link</a> to apply to write for us.</p>
     </div>
-    <div id="footer-sec-right" class="sec-bubbles">
+    <div id="footer-sec-right" class="sec-bubbles" data-aos="fade-up" data-aos-offset="500" data-aos-duration="800">
         <div id="contact-header-txt"><b>Contact & Follow</b></div><br>
         <div>Follow us on Instagram:</div>
         <p><b><a class="link" href="https://www.instagram.com/thehelpdeskapp/">@thehelpdeskapp</a></b></p>
@@ -95,7 +97,7 @@ The Helpdesk is an app that allows you to get access to updated, current, and ve
         <div>Email us:</div>
         <p><b><a class="link" href="mailto:questions@thehelpdesk.app">questions@thehelpdesk.app</a></b></p>
     </div>
-    <div id="footer-sec-right-sub" class="sec-bubbles">
+    <div id="footer-sec-right-sub" class="sec-bubbles" data-aos="fade-up" data-aos-offset="500" data-aos-duration="800">
         <div id="copyright-header-txt"><b>Copyright & Legal</b></div><br>
     <b>Copyright Notice</b><br>
     Copyright 2020 The Helpdesk under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.<br>
@@ -117,5 +119,10 @@ Visit the <a class="link" href="https://creativecommons.org/licenses/by-nc-nd/4.
   
     </div>
     </main>
+    
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
