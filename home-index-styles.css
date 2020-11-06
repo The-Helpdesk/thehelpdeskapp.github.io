@@ -243,6 +243,7 @@ color: white;
     #abt-hero-img, #abt-hero-txt {
       filter: none;
         text-shadow: none;
+        color: white;
         }
     .card {
     background-color: black;
