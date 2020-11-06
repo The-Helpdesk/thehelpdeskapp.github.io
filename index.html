@@ -24,35 +24,20 @@ opacity: 0.7;
     #home-link {
 opacity: 1;
     }
-@media (prefers-color-scheme: dark) {
-    body {
-    background-color: black;
-    color: white;
-    }
-    .sec-bubbles {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    }
-    #intro-txt {
-    color: white
-    }
-    a, .link {
-    color: white;
-    }
-    }
 </style>
 </head>
 <body id="body"><main>
-    <div id="sec-1"><!--<center>
+    <div id="sec-1"><div class="nav-wrapper">
 <nav id="nav-bar">
-    <span class="menu-link" id="home-link"><a class="link" href="/index.html"><b>Home</b></a></span>
-    </nav></center> --><center>
+    <span class="menu-link active-link" id="home-link"><a class="link" href="/index.html"><b id="lock-color">Home</b></a></span>
+    <span class="menu-link" id="learn-more-link"><a class="link" href="/learn-more/learn-more.html"><b class="link">Learn More</b></a></span>
+        </nav></div><center>
     <picture>
-  <source id="bg-header-img" type="image/webp" srcset="./media/images/icons/circular-icons/circular-icon-border.webp" alt="The Helpdesk Icon" >
-  <source id="bg-header-img" type="image/jpeg" srcset="./media/images/icons/circular-icons/circular-icon-border.png" alt="the Helpdesk Icon">
-  <img id="bg-header-img" type="image/jpeg" srcset="./media/images/icons/circular-icons/circular-icon-border.png" alt="the Helpdesk Icon">
+  <source class="hero-img" type="image/webp" srcset="./media/images/icons/circular-icons/circular-icon-border.webp" alt="The Helpdesk Icon" >
+  <source class="hero-img" type="image/jpeg" srcset="./media/images/icons/circular-icons/circular-icon-border.png" alt="the Helpdesk Icon">
+  <img class="hero-img" type="image/jpeg" srcset="./media/images/icons/circular-icons/circular-icon-border.png" alt="the Helpdesk Icon">
 </picture>
-        <div id="bg-header-txt">The Helpdesk</div></center>
+        <div class="hero-txt">The Helpdesk</div></center>
     </div>
 <div id="sec-2">
 <div class="sec-bubbles" id="info-sec" data-aos="fade-up" data-aos-offset="500" data-aos-duration="800">
@@ -105,7 +90,7 @@ The Helpdesk is an app that allows you to get access to updated, current, and ve
    <b>Legal</b><br>
 Visit the <a class="link" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons page</a> to learn how this website and its contents are licensed.
     </div>
-    <div id="footer-sec-right-sub2" class="sec-bubbles">
+    <div id="footer-sec-right-sub2" class="sec-bubbles" data-aos="fade-up" data-aos-offset="50" data-aos-duration="800">
         <div id="credit-header-txt"><b>Credits</b></div><br>
     <div id="credit-body-txt">
         <b>Introducing The Helpdesk (Video)</b>

@@ -1,21 +1,21 @@
-#bg-header-txt {
-animation-name: bg-header-txt-fdin;
+.hero-txt {
+animation-name: hero-txt-fdin;
 animation-duration: 0.8s;
 animation-delay: 0.5s;
 opacity: 0;
 animation-fill-mode: forwards;
 }
-@keyframes bg-header-txt-fdin {
+@keyframes hero-txt-fdin {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-#bg-header-img {
-animation-name: bg-header-img-fdin;
+.hero-img {
+animation-name: hero-img-fdin;
 animation-duration: 0.8s;
 animation-fill-mode: forwards;
 transform: rotate(-35deg)
 }
-@keyframes bg-header-img-fdin {
+@keyframes hero-img-fdin {
     from {
         opacity: 0;
         transform: rotate(-35deg);
