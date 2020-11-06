@@ -230,7 +230,7 @@ color: white;
     .hero-txt {
     color: white;
     }
-    a, .link {
+    a, .link, #intro-txt {
     color: white;
     }
     #lock-color {
