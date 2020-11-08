@@ -73,16 +73,18 @@ width: 52px;
     #color-box {
     margin: none;
     }
-
+    h1 {
+    font-family: none;
+    font-weight: 400;
+    }
 </style>
 </head>
 <body id="body">
-<!--
-<button style="float:left" class="dflt-bg no-out" id="back-btn" onclick="back()">Back</button>
-<!-- Modified from source: W3 Schools
+<!-- Modified from source: W3 Schools-->
 <div id="whats-new-box" class="popup txtclring">
   <div class="popup-content bgclring">
     <span class="close" onclick="document.getElementById('whats-new-box').style.display = 'none';">&times;</span>
+      <!--
     <div class="popup-header">Welcome to the Helpdesk</div>
     <ul id="popup-header-content">
     <li>Technology help at your fingertips</li>
@@ -93,7 +95,7 @@ width: 52px;
     <li>Support for a wide variety of devices</li>
     </ul>
       <i><b>Tip:</b> to see this box again, click on the version number in the Quick Controls menu at the top of your screen.</i>
-    </div></div>
+   --> </div></div>
     <!-- End modified content from source -->
 <script>
 var body = document.getElementById('body');
@@ -102,7 +104,7 @@ var body = document.getElementById('body');
 <div id="sidebar-container">
 <div id="sidebar-content">
 <div class="dflt-bg group-box" id="no-hvr">
-<b>Filter &#38; Search</b>
+<b>Filter &amp; Search</b>
 <div id="search-container" class="dflt-bg"><img id="search-icon"><input placeholder="Search" type="text" id="search-field" class="txtclring" oninput="search();"></div>
 <div id="filter-container" class="dflt-bg txtclring"><img id="filter-icon"><select onchange="filter();" id="filter-field" class="txtclring">
 <option selected>All</option>    
@@ -115,6 +117,11 @@ var body = document.getElementById('body');
     <button title="Change the background color." id="color-switch" onclick="switch_bg_color()" class="dflt-bg no-out"><div id="color-box"></div></button>
 <button title="Switch between light and dark mode." id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"></button>
 <button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"></button>
+</div>
+<div class="dflt-bg group-box" id="no-hvr">
+<b>Accessibility</b><br>
+<button class="dflt-bg no-out" onclick="reduceTranslucency();">Reduce Translucency</button><br>
+<button class="dflt-bg no-out" onclick="boldfont();">Bold Font</button>
 </div>
 <div class="dflt-bg group-box" id="no-hvr">
 <b>Menu</b><br>
@@ -153,8 +160,7 @@ Featured Content
 </div>
 </div>
 <center>
-<b style="color: white;" id="with-script">It looks like we've encountered an error (404). Please try reloading the page.</b><br>
-    <noscript><b style="color: white;" id="no-script">Please enable Javascript in your browser settings.</b></noscript>
+    <noscript><b style="color: white;" id="no-script">It looks like we've encountered an error (404). Please make sure Javascript is enabled in your browser settings. If you haven't modified your browser settings to disable JavaScript, try reloading the page.</b></noscript>
 </center>
 <!--
 <table class="tble-full">
@@ -199,7 +205,6 @@ var drpdwnvl = document.getElementById('device-selection').value;
 <div id="iphone-cat-boxes"></div>
 
     <script>
-        console.log("ScriptStart")
         //Modified code from https://howtocreateapps.com/fetch-and-display-json-html-javascript/
         //Fetches icons and names for the correct device
         fetch('/web-app/pages/help/dvc-pages/iphone/iphone-cats.json')
@@ -276,6 +281,18 @@ function filter() {
          .catch(function (err) {
                 console.log('error: ' + err);
             });
+}
+</script>
+<script>
+function reduceTranslucency() {
+var darkorlight = localStorage.getItem('theme_stored');
+var changeClassOf = ['dflt-bg','cat-box','no-hvr:hover','slider.round','question']
+    if (darkorlight == 'dark') {
+for (var a = 0; a < changeClassOf.length; i++) {
+    for (var i = 0; i < document.getElementsByClassName(changeClassOf[a]).length; i++) {
+document.getElementsByClassName(changeClassOf[a])[i].background = "rgba(0,0,0,1)";
+    }
+}}
 }
 </script>
 </body>
