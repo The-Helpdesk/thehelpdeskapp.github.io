@@ -1,0 +1,199 @@
+<html>
+<head>
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles.css">
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet">
+<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet">
+<style>
+    .report-card {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    width: 40%;
+    height: auto;
+    float: left;
+    margin-left: 10px;
+    }
+    .report-card-subttl {
+    display: block;
+    }
+    .report-card-header, .report-card-subheader {
+    font-weight: 600;
+    font-size: 50px; margin: 0;
+    }
+    .bubble {
+  height: 20px;
+  width: 20px;
+  margin: 3px;
+  border-radius: 50%;
+  border: 1px solid black;
+  float: right;
+  transform: translateY(-45px);
+    }
+    .score-box, .details-box {
+    background: rgba(255, 255, 255, 0.35);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    }
+    body {
+    padding: 10px;
+    }
+    .detail-rating-box, .key-detail-rating-box {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #D73A49;
+    float: left;
+    }
+    .details-key {
+    background: rgba(255,255,255, 0.35);
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    }
+    .detail-txt {
+    margin-left: 10px;
+    padding-left: 10px;
+    transform: translateY(-4px);
+    }
+    .details-box {
+    height: 200px;
+    }
+ .key-detail-txt {
+    margin-left: 3px;
+    transform: translateY(-1px);
+    }
+
+.key-detail-rating-box {
+    margin-left: 15px; 
+    } 
+    .details-right, .details-left {
+    float: left;
+    margin: 10px;
+    }
+    .detail-row {
+    display: block;
+    }
+</style>
+</head>
+<body style="background-color: slateblue;">
+<div class="report-card">
+    <div class="report-card-header">Software Name</div>
+    <div class="report-card-subttl">
+        <span class="subttle-preview-txt">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+            <span class="read-more">...<b>Read more</b></span>
+        </span>
+    </div>
+    <div class="score-box">
+        <span class="report-card-subheader">User Experience</span>
+        <div class="bubbles">
+            <span class="bubble" id="bubble-00"></span>
+            <span class="bubble" id="bubble-01"></span>
+            <span class="bubble" id="bubble-02"></span>
+            <span class="bubble" id="bubble-03"></span>
+            <span class="bubble" id="bubble-04"></span>
+        </div>
+    </div>
+    <div class="score-box">
+        <span class="report-card-subheader">Design</span>
+        <div class="bubbles">
+            <span class="bubble" id="bubble-10"></span>
+            <span class="bubble" id="bubble-11"></span>
+            <span class="bubble" id="bubble-12"></span>
+            <span class="bubble" id="bubble-13"></span>
+            <span class="bubble" id="bubble-14"></span>
+        </div>
+    </div>
+    <div class="score-box">
+        <span class="report-card-subheader">Simplicity</span>
+        <div class="bubbles">
+            <span class="bubble" id="bubble-20"></span>
+            <span class="bubble" id="bubble-21"></span>
+            <span class="bubble" id="bubble-22"></span>
+            <span class="bubble" id="bubble-23"></span>
+            <span class="bubble" id="bubble-24"></span>
+        </div>
+    </div>
+    <div class="score-box">
+        <span class="report-card-subheader">Accessibility</span>
+        <div class="bubbles">
+            <span class="bubble" id="bubble-30"></span>
+            <span class="bubble" id="bubble-31"></span>
+            <span class="bubble" id="bubble-32"></span>
+            <span class="bubble" id="bubble-33"></span>
+            <span class="bubble" id="bubble-34"></span>
+        </div>
+    </div>
+    <div class="details-box">
+        <div class="details-subheader report-card-subheader">Additional Details</div>
+        <div class="details-key">
+            <div class="key-detail-rating-box" style="background-color: #27A74A"></div>
+            <div class="key-detail-txt">Yes</div>
+            <div class="key-detail-rating-box" style="background-color: #D28929"></div>
+            <div class="key-detail-txt">Somewhat</div>
+            <div class="key-detail-rating-box" style="background-color: #D73A49"></div>
+            <div class="key-detail-txt">No</div>
+            <div class="key-detail-rating-box" style="background-color: #0366D6"></div>
+            <div class="key-detail-txt">In beta</div>
+            <div class="key-detail-rating-box" style="background-color: #6D5090"></div>
+            <div class="key-detail-txt">Platform-dependent</div>
+        </div>
+        <div class="details-left">
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">Dark Mode</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">B</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">C</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">D</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">E</div>
+            </div>
+        </div>
+        <div class="details-right">
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">F</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">G</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">H</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">I</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-rating-box"></div>
+                <div class="detail-txt">K</div>
+        
+            </div>
+    </div>
+</div>
+    <div class="score-box">
+        <span class="report-card-subheader">Overall Rating</span>
+        <div class="bubbles">
+            <span class="bubble" id="bubble-40"></span>
+            <span class="bubble" id="bubble-41"></span>
+            <span class="bubble" id="bubble-42"></span>
+            <span class="bubble" id="bubble-43"></span>
+            <span class="bubble" id="bubble-44"></span>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
