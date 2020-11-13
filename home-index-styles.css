@@ -55,7 +55,7 @@ width: 100vw;
 height: auto;
 display: flex;
 flex-wrap: wrap;
-background-image: url("/media/images/footer-img.webp");
+background-image: url("/media/images/footer-image.webp");
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
