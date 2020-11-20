@@ -69,7 +69,6 @@ if (theme_stored == 'null' || theme_stored == 'no-pref' || theme_stored == null)
 //Set the item in local storage to no pref for new users/users resetting
 localStorage.setItem('theme_stored', 'no-pref');
 //Run function to auto determine theme
-autoTheme();
 } else {
 //Code for if the user has overrided the auto theme
 if (theme_stored == 'dark') {
@@ -91,6 +90,7 @@ themevar = 'dark';
 document.getElementById('dark-stylesheet').disabled = false;
 document.getElementById('light-stylesheet').disabled = true;
 DarkModeIcons();
+
 } 
 //if the theme is dark, switch it to light
 else {

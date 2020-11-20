@@ -23,46 +23,19 @@ padding: 3px;
 </style>
 </head>
 <body id="body">
-<button style="float:left" class="dflt-bg no-out" id="back-btn" onclick="back()">Back</button>
-<!-- Modified from source: W3 Schools -->
-<div id="whats-new-box" class="popup txtclring">
-  <div class="popup-content bgclring">
-    <span class="close" onclick="document.getElementById('whats-new-box').style.display = 'none';">&times;</span>
-    <div class="popup-header">Welcome to the Helpdesk</div>
-    <ul>
-    <li>Technology help at your fingertips</li>
-    <li>All-in-one, trusted source for computer knowledge and support</li>
-    <li>Easy access to help- search or browse</li>
-    <li>Featured articles and tips every day</li>
-    <li>Visually customizable with Light and Dark mode and color themes</li>
-    <li>Support for a wide variety of devices</li>
-    </ul>
-      <i><b>Tip:</b> to see this box again, click on the version number in the Quick Controls menu at the top of your screen.</i>
-    </div></div>
-    <!-- End modified content from source -->
-<script>
-var body = document.getElementById('body');
-    </script>
-<center>
-
-<table>
-<tr>
-<td><div id="search-container" class="dflt-bg"><img id="search-icon"><input placeholder="Search" type="text" id="search-field" class="txtclring" oninput="search();"></div></td>
-<td><div id="filter-container" class="dflt-bg txtclring"><img id="filter-icon"><select onchange="filter();" id="filter-field" class="txtclring">
-<option selected>All</option>    
-<option>System</option>
-<option>App</option>
-</select></div></td>
-<td><button id="v-popup-btn" onclick="showWhatsNew()" class="dflt-bg no-out"><div id="version">v1.0</div></button></td>
-<td><button id="color-switch" onclick="switch_bg_color()" class="dflt-bg no-out"><div id="color-box"></div></button></td>
-<td><button id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"></button></td>
-<td><button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"></button></td>
-</tr></table>
-</center>
+<div id="whats-new-wrapper"></div>
+<div id="sidebar-container" class="sidebar-container"></div>
+    <noscript><b style="color: white;" id="no-script">It looks like we've encountered an error (404). Please make sure Javascript is enabled in your browser settings. If you haven't modified your browser settings to disable JavaScript, try reloading the page.</b></noscript>
 <table><div id="iphone-art-title-boxes"></div></table>
 <script>
 sessionStorage.setItem("last-page","/web-app/pages/help/help-index.html");
 </script>
+<script src="/web-app/scripts/prefs.js"></script>
+<script src="/web-app/scripts/universal-scripts.js"></script>
+<script src="/web-app/scripts/accessibility.js"></script>
+<script src="/web-app/scripts/sidebar.js"></script>
+<script src="/web-app/scripts/version-sync.js"></script>
+<script src="/web-app/scripts/visuals.js"></script>
 <script>
 console.log("In FuncA")
 var tdContain = document.getElementById("iphone-art-title-boxes");
@@ -78,9 +51,10 @@ function fetchFunction() {
             console.log("Passed function run")
             });}
         function addCatData(data) {
+            for (var i = 0; i < data.length; i++) {
             console.log("Adding data")
                 var td = document.createElement("td");
-                td.appendChild(td);
+                tdContain.appendChild(td);
                 var a = document.createElement("a");
                 a.href = '/';
                 td.appendChild(a)
@@ -94,11 +68,8 @@ function fetchFunction() {
                 var img = document.createElement("img");
                 img.src = "/web-app/media/images/icons/arrow-icon.svg";
                 span.appendChild(img);
-        }
+        }}
     fetchFunction();
     </script>
-<script src="/web-app/universal-scripts.js"></script>
-<script src="/web-app/prefs.js"></script>
-<script src="/web-app/pages/help/visuals.js"></script>
     </body>
 </html>

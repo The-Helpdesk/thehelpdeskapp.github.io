@@ -34,3 +34,11 @@ background-color: black;
 .close:hover, .close:focus {
 color: white;
 }
+/*Accessibility styles that overule regular styles*/
+.reduceTranslucency {
+background: rgba(0, 0, 0) !important;
+border: 1px solid white;
+}
+.boldFont {
+font-weight: bold !important;
+}
