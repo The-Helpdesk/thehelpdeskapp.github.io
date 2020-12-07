@@ -15,7 +15,6 @@ if (cur_search_term == "") {
     }
 }
 for (i=0;i<28;i++) {
-console.log("Search running")
     var cur = document.getElementsByClassName('search-term')[i];
     var cur_item = cur.innerHTML || cur.textContent;
     cur_search_term = cur_search_term.toLowerCase();

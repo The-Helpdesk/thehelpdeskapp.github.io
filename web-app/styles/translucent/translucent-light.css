@@ -1,21 +1,21 @@
 
-.cat-box {
+ .cat-box {
 color: black;
-background: rgba(255, 255, 255, 0.6);
+background: rgba(255, 255, 255, 0.65);
     }
 .dflt-bg {
 color: black;
-background: rgba(255, 255, 255, 0.5);
+background: rgba(255, 255, 255, 0.65);
 }
 .slider.round {
-background: rgba(255, 255, 255, 0.5)
+background: rgba(255, 255, 255, 0.65)
 }
 .dflt-bg:hover {
 background: rgba(255,255,255,0.65)
 }
-    #no-hvr:hover {
-color: black;
-background: rgba(255, 255, 255, 0.5);
+    #no-hvr:hover, .no-hvr:hover {
+color: black !important;
+background: rgba(255, 255, 255, 0.65) !important;
     }
     a {
 color: black;
@@ -37,12 +37,15 @@ color: black;
 }
 .close:hover, .close:focus {
 color: black;
+<<<<<<< Updated upstream:web-app/pages/help/web-app-help-universal-styles-light.css
+=======
 }
 /*Accessibility styles that overule regular styles*/
 .reduceTranslucency {
-background: rgba(255, 255, 255) !important;
 border: 1px solid black;
+background: rgba(255, 255, 255) !important;
 }
 .boldFont {
 font-weight: bold !important;
+>>>>>>> Stashed changes:web-app/styles/translucent/translucent-light.css
 }

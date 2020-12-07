@@ -1,12 +1,13 @@
 <html id="html">
 <head>
-<link rel="stylesheet" href="pages/help/web-app-help-universal-styles.css">
-<link rel="stylesheet" href="pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet">
-<link rel="stylesheet" href="pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet">
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent.css"> 
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent-light.css" id="light-stylesheet"> 
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent-dark.css" id="dark-stylesheet"> 
 <style>
     #hero-header {
 font-size: 100px;
 color: white;
+font-weight: 600;
     }
     td {
     font-size: 80px;
@@ -32,23 +33,8 @@ color: white;
 </style>
 </head>
 <body>
-<!-- Modified from source: W3 Schools -->
-<div id="whats-new-box" class="popup txtclring">
-  <div class="popup-content bgclring">
-    <span class="close" onclick="document.getElementById('whats-new-box').style.display = 'none';">&times;</span>
-    <div class="popup-header">Welcome to the Helpdesk</div>
-    <ul id="popup-header-content"><!--
-    <li>Technology help at your fingertips</li>
-    <li>All-in-one, trusted source for computer knowledge and support</li>
-    <li>Easy access to help- search or browse</li>
-    <li>Featured articles and tips every day</li>
-    <li>Visually customizable with Light and Dark mode and color themes</li>
-    <li>Support for a wide variety of devices</li>
-    <li>You are currently on v0.1.2 Alpha 2</li>-->
-    </ul>
-      <i><b>Tip:</b> to see this box again, click on the version number in the Quick Controls menu at the top of your screen.</i>
-    </div></div>
-    <!-- End modified content from source -->
+<div id="whats-new-wrapper"></div>
+    <noscript><b style="color: white;" id="no-script">It looks like we've encountered an error (404). Please make sure Javascript is enabled in your browser settings. If you haven't modified your browser settings to disable JavaScript, try reloading the page.</b></noscript>
 <center>
 <table>
 <tr>
@@ -57,7 +43,7 @@ color: white;
 <td><button id="theme-switch" onclick="preTheme()" class="dflt-bg no-out"><img id="dark-mode"></button></td>
 <td><button id="theme-reset" onclick="autoTheme()" class="dflt-bg no-out"><img id="auto-theme"></button></td>
     </tr></table></center>
-<center id="hero-header">The Helpdesk</center>
+    <center id="hero-header">The Helpdesk</center>
 <table id="main-btns-tbl">
 <tr>
 <th rowspan="2"><button class="dflt-bg no-out" id="get-help-btn"><a href="pages/help/help-index.html">
@@ -73,8 +59,8 @@ color: white;
 <div class="homepage-icon-subtitle">Learn about our partner</div>
     </button></a></th>
 <th><button class="dflt-bg no-out disabled" onclick="window.alert('You do not have access to this resource');">
-<img src="get-help-icon.png" id="edu-enterprise-icon"><br>
- <div class="homepage-icon-subtitle">The Helpdesk for Enterprise and Edu </div>
+<!--<img src="get-help-icon.png" id="edu-enterprise-icon"><br>
+ <div class="homepage-icon-subtitle">The Helpdesk for Enterprise and Edu </div>-->
 </button></th>
 </tr>
 <tr>
@@ -95,11 +81,16 @@ color: white;
 <script>
 sessionStorage.setItem("last-page","/web-app/index.html");
 </script>
+<<<<<<< Updated upstream
+<script src="prefs.js"></script>
+<script src="pages/help/visuals.js"></script>
+<script src="universal-scripts.js"></script>
+=======
 <script src="/web-app/scripts/prefs.js"></script>
 <script src="/web-app/scripts/universal-scripts.js"></script>
 <script src="/web-app/scripts/accessibility.js"></script>
-<script src="/web-app/scripts/sidebar.js"></script>
 <script src="/web-app/scripts/version-sync.js"></script>
 <script src="/web-app/scripts/visuals.js"></script>
+>>>>>>> Stashed changes
 </body>
 </html>

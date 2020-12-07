@@ -55,7 +55,7 @@ width: 100vw;
 height: auto;
 display: flex;
 flex-wrap: wrap;
-background-image: url("/media/images/footer-image.webp");
+background-image: url("/media/images/footer-img.png");
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
@@ -185,7 +185,6 @@ display: flex;
 }
 .flex-card {
 flex-basis: 23%;
-flex-shrink: 0%;
 filter: drop-shadow( 0 0 0 lightgrey);
 }
 .no-padding {
@@ -217,23 +216,6 @@ border-radius: 10px;
 }
 #lock-color {
 color: white;
-}
-@media only screen and (max-width: 769px) {
-    .card {
-    width: 80vw;
-    }
-    #projects {
-    height: 100vh;
-    }
-    .card-carousel {
-    height: 92vh;
-    }
-    #comp-values {
-    height: 100vh
-    }
-    .flex-card {
-    width: 100vw;
-    }
 }
 @media (prefers-color-scheme: dark) {
     body, html {

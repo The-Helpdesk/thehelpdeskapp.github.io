@@ -4,8 +4,8 @@ color: white;
 background: rgba(0, 0, 0, 0.5);
     }
     .no-hvr:hover, #no-hvr:hover {
-color: white;
-background: rgba(0, 0, 0, 0.5);
+color: white !important;
+background: rgba(0, 0, 0, 0.5) !important;
     }
 .slider.round {
 background: rgba(0, 0, 0, 0.5)
@@ -33,12 +33,15 @@ background-color: black;
 }
 .close:hover, .close:focus {
 color: white;
+<<<<<<< Updated upstream:web-app/pages/help/web-app-help-universal-styles-dark.css
+=======
 }
 /*Accessibility styles that overule regular styles*/
 .reduceTranslucency {
-background: rgba(0, 0, 0) !important;
 border: 1px solid white;
+background: rgba(0, 0, 0) !important;
 }
 .boldFont {
 font-weight: bold !important;
+>>>>>>> Stashed changes:web-app/styles/translucent/translucent-dark.css
 }

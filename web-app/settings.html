@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html id="html">
 <head>
-<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles.css">
-<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet">
-<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet">
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent.css"> 
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent-light.css" id="light-stylesheet"> 
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent-dark.css" id="dark-stylesheet"> 
 <style>
     html {
     color: white;
@@ -16,12 +16,33 @@ font-weight: 600;
     .sub-header {
 font-size: 50px;
 font-weight: 200;
+font-weight: 600;
     }
     input {
     padding: 3px;
     }
     li {
     list-style: none;
+    }
+    .settings-box {
+    text-align: left !important;
+    }
+    .lg-set-bx {
+    width: 50%;
+    float: left;
+    margin: 8px;
+    }
+    .sm-set-bx {
+    float: left;
+    margin: 8px;
+    height: 37%;
+    width: 25%;
+    }
+    #sidebar {
+    height: 63%;
+    }
+    #themes {
+    width: 20%;
     }
 </style>
 </head>
@@ -37,55 +58,135 @@ font-weight: 200;
 </center>
 <div id="hero-header" class="header">Settings</div>
 <!-- Start settings catogory list -->
+<div class="cat-box settings-box lg-set-bx no-hvr" id="sidebar">
+<div class="sub-header">Sidebar</div>
+<i style="float: left;">Note: These do not change the settings; they only change what items are viewable in the sidebar or at the top of your screen.</i>
+<br>
+<div class="cat-box settings-box sm-set-bx">
+<script>
+var topLevelCheck;
+var checkChanged;
+</script>
+<b><input type="checkbox" class="topCheck" onchange="topLevelCheck = 'filterSearch'; checkTopLevel();">Filter &amp; Search</b>
 <ul>
-<li><div class="sub-header">General</div>
+    <li><label><input onchange="checkChanged='search'; updateSidebarPrefs();" class="filterSearchCheckbox" type="checkbox" id="search-check" class="bg-styled qc"> Search</label></li><br>
+    <li><label><input onchange="checkChanged='filter'; updateSidebarPrefs();" class="filterSearchCheckbox" type="checkbox" id="filter-check" class="bg-styled qc"> Filter</label></li><br>
+    </ul>
+</div>
+<div class="cat-box settings-box sm-set-bx">
+<b><input type="checkbox" class="topCheck" onchange="topLevelCheck = 'theme'; checkTopLevel();">Theme</b>
 <ul>
-<li>
-    <b>Quick Controls Menu:</b>
+    <li><label><input onchange="checkChanged='dark'; updateSidebarPrefs();" class="themeCheckbox" type="checkbox" id="dark-check" class="bg-styled qc">&nbsp;Dark Mode</label></li><br>
+    <li><label><input onchange="checkChanged='bg'; updateSidebarPrefs();" class="themeCheckbox" type="checkbox" id="bg-check" class="bg-styled qc">&nbsp;Background Color</label></li><br>
+    <li><label><input onchange="checkChanged='auto'; updateSidebarPrefs();" class="themeCheckbox" type="checkbox" id="auto-check" class="bg-styled qc">&nbsp;Auto Theme</label></li><br>
+    </ul>
+</div>
+<div class="cat-box settings-box sm-set-bx">
+<b><input type="checkbox" class="topCheck" onchange="topLevelCheck = 'accessibility'; checkTopLevel();">Accessibility</b>
 <ul>
-    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="search-check" class="bg-styled qc"> Search</label></li><br>
-    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="filter-check" class="bg-styled qc"> Filter</label></li><br>
-    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="about-check" class="bg-styled qc"> About Version</label></li><br>
-    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="bg-check" class="bg-styled qc"> Background color</label></li><br>
-    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="theme-check" class="bg-styled qc"> Theme</label></li><br>
-    <li><label><input onchange="updateQCPrefs()" type="checkbox" id="auto-check" class="bg-styled qc"> Auto Theme</label><br></li></ul>
-</li>
-</ul>
-</li>
-<li>
+    <li><label><input onchange="checkChanged='translucent'; updateSidebarPrefs();" class="accessibilityCheckbox" type="checkbox" id="translucent-check" class="bg-styled qc">&nbsp;Reduce Translucency</label></li><br>
+    <li><label><input onchange="checkChanged='bold'; updateSidebarPrefs();" class="accessibilityCheckbox" type="checkbox" id="bold-check" class="bg-styled qc">&nbsp;Bold Font</label></li>
+    </ul>
+</div>
+<div class="cat-box settings-box sm-set-bx">
+<b><input type="checkbox" class="topCheck" onchange="topLevelCheck = 'menu'; checkTopLevel();">Menu</b>
+<ul>
+    <li><label><input onchange="checkChanged='help'; updateSidebarPrefs();" class="menuCheckbox" type="checkbox" id="help-check" class="bg-styled qc">&nbsp;Help</label></li><br>
+    <li><label><input onchange="checkChanged='dictionary'; updateSidebarPrefs();" class="menuCheckbox" type="checkbox" id="dictionary-check" class="bg-styled qc">&nbsp;Tech Dictionary</label></li><br>
+    <li><label><input onchange="checkChanged='content'; updateSidebarPrefs();" class="menuCheckbox" type="checkbox" id="content-check" class="bg-styled qc">&nbsp;Featured Content</label></li><br>
+    <li><label><input onchange="checkChanged='picker'; updateSidebarPrefs();" class="menuCheckbox" type="checkbox" id="picker-check" class="bg-styled qc">&nbsp;Computer Picker</label></li>
+    </ul>
+</div>
+<div class="cat-box settings-box sm-set-bx">
+<b><input type="checkbox" class="topCheck" onchange="topLevelCheck = 'utilities'; checkTopLevel();">Utilities</b>
+<ul>
+    <li><label><input onchange="checkChanged='whatsNew'; updateSidebarPrefs();" class="utilitiesCheckbox" type="checkbox" id="whatsNew-check" class="bg-styled qc">&nbsp;Version/What's New</label></li><br>
+    <li><label><input onchange="checkChanged='settings'; updateSidebarPrefs();" class="utilitiesCheckbox" type="checkbox" id="settings-check" class="bg-styled qc">&nbsp;Settings</label></li><br>
+    </ul>
+</div>
+    </div>
+<div class="cat-box settings-box lg-set-bx" id="themes">
 <div class="sub-header">Themes</div>
-<!--<ul>
+<ul>
 <li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Red</label></li>
 <li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Orange</label></li>
 <li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Green</label></li>
 <li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Blue</label></li>
 <li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Pink</label></li>
 <li><label><input onchange="updateColorPrefs()" type="checkbox" class="color-check"> Purple</label></li>
-</ul>-->
-</li>
 </ul>
+<<<<<<< Updated upstream
+<script src="/web-app/pages/help/prefs.js"></script>
+<script src="/web-app/pages/help/visuals.js"></script>
+<script src="/web-app/universal-scripts.js"></script>
+=======
+</div>
 <script src="/web-app/scripts/prefs.js"></script>
 <script src="/web-app/scripts/universal-scripts.js"></script>
-<script src="/web-app/scripts/accessibility.js"></script>
-<script src="/web-app/scripts/sidebar.js"></script>
-<script src="/web-app/scripts/version-sync.js"></script>
+<!--<script src="/web-app/scripts/accessibility.js"></script>-->
+<!--<script src="/web-app/scripts/sidebar.js"></script>-->
+<!--<script src="/web-app/scripts/version-sync.js"></script>-->
 <script src="/web-app/scripts/visuals.js"></script>
+>>>>>>> Stashed changes
 <script>
 sessionStorage.setItem("last-page","/web-app/settings.html");
 </script>
 <script>
-//Update the preferences by finding if the preference has changed
-function updateQCPrefs() {
-for (i = 0; i < 6; i++) {
-var cur_check = document.getElementById(qc_checks[i]).checked;
-if (cur_check == false) {
-qc_prefs[i] = "hide";
-try{document.getElementById(qcs[i]).style.display = 'none';}catch(err){console.log(err)}
-} else {
-qc_prefs[i] = "show";
-try{document.getElementById(qcs[i]).style.display = 'inline-block';}catch(err){console.log(err)}
+if (isNull == true) {
+var topLevelCheckOptions = ["filterSearch","theme","accessibility","menu","utilities"];
+for (var i = 0; i < topLevelCheckOptions.length; i++) {
+topLevelCheck = topLevelCheckOptions[i];
+        document.getElementsByClassName("topCheck")[i].checked = true;
+        checkTopLevel();
 }
-localStorage.setItem("qc", JSON.stringify(qc_prefs));
+isNull = false;
+}
+//Update the preferences by finding if the preference has changed
+function updateSidebarPrefs() {
+var availableFilterSearchPrefs = ['search','filter']
+var availableThemePrefs = ['dark','bg','auto']
+var availableAccessibilityPrefs =  ['translucent','bold']
+var availableMenuPrefs = ['dictionary','content','picker']
+var availableUtilitiesPrefs = ['whatsNew','settings'];
+var availablePrefsArrays =
+[availableFilterSearchPrefs,availableThemePrefs,availableAccessibilityPrefs,availableMenuPrefs,availableUtilitiesPrefs];
+var matchStoragePrefArray = ['filterSearchPrefs','themePrefs','accessibilityPrefs','menuPrefs','utilitiesPrefs'];
+for (var i=0; i < availablePrefsArrays.length; i++) {
+var currentArray = availablePrefsArrays[i];
+for (var a=0; a < currentArray.length; a++) {
+var currentStorageArray = matchStoragePrefArray[i]
+console.log(checkChanged)
+console.log(currentArray[a])
+if (checkChanged == currentArray[a]) {
+    console.log("In if")
+    var checkboxSelected = document.getElementById(currentArray[a] + '-check')
+    console.log(checkboxSelected.checked);
+    var storageSetArray = matchStoragePrefArray[a]
+    if (checkboxSelected.checked == true) {
+    console.log('SETTING ' + storageSetArray);
+    var itemSelected = JSON.parse(localStorage.getItem(storageSetArray))
+        itemSelected[i] = true;
+    console.log(itemSelected)
+    localStorage.setItem(JSON.stringify(itemSelected),'true')
+    } else if (checkboxSelected.checked == false) {
+    localStorage.setItem(storageSetArray,'false')
+}
+}}}
+console.log('functioncomplete')
+}
+function checkTopLevel() {
+var checkCombine = topLevelCheck + "Checkbox";
+var checkboxesInCatogory = document.getElementsByClassName(checkCombine);
+var exsisting_prefs = JSON.parse(localStorage.getItem(topLevelCheck + 'Prefs'));
+for (var i = 0; i < checkboxesInCatogory.length; i++) {
+        if (checkboxesInCatogory[i].checked == true) {
+            checkboxesInCatogory[i].checked = false;
+            exsisting_prefs[i] = false;
+        } else {
+            checkboxesInCatogory[i].checked = true;
+            exsisting_prefs[i] = true;
+        }
+    localStorage.setItem(topLevelCheck + 'Prefs', JSON.stringify(exsisting_prefs));
 }}
 </script>
 </body>

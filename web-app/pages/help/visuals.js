@@ -16,7 +16,7 @@ var folder = "/web-app/media/images/homepage-icons/white/"
 var file_names = ["get-help","tech-dictionary","partner","edu-enterprise","computer-picker","todays-content","settings"];
 for (i=0;i<7;i++) {
 console.log(folder + file_names[i] + '-black.png')
-document.getElementById(file_names[i] + '-icon').src = folder + file_names[i] + '-white.png';
+try{document.getElementById(file_names[i] + '-icon').src = folder + file_names[i] + '-white.png';}catch(err){}
 }
 }}
 DarkModeIcons();
@@ -69,6 +69,7 @@ if (theme_stored == 'null' || theme_stored == 'no-pref' || theme_stored == null)
 //Set the item in local storage to no pref for new users/users resetting
 localStorage.setItem('theme_stored', 'no-pref');
 //Run function to auto determine theme
+autoTheme();
 } else {
 //Code for if the user has overrided the auto theme
 if (theme_stored == 'dark') {
@@ -90,7 +91,6 @@ themevar = 'dark';
 document.getElementById('dark-stylesheet').disabled = false;
 document.getElementById('light-stylesheet').disabled = true;
 DarkModeIcons();
-
 } 
 //if the theme is dark, switch it to light
 else {
@@ -161,5 +161,8 @@ function set_bg_color() {
 //Set the colors of the gradient
 document.getElementById('html').style.background =  'linear-gradient(to bottom right, #191923, ' + bgcolor +')';
 //Set the color of the button
+var bgButtonShow = JSON.parse(localStorage.getItem('themePrefs'));
+if (bgButtonShow[0] != false) {
 document.getElementById('color-box').style.backgroundColor = bgcolor;
-}
+}}
+var deepBlue = ['20,20,40','31,31,51','47,47,67','60,60,100'];

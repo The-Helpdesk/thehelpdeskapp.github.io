@@ -1,9 +1,9 @@
 <html id="html">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles.css"> 
-<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-light.css" id="light-stylesheet"> 
-<link rel="stylesheet" href="/web-app/pages/help/web-app-help-universal-styles-dark.css" id="dark-stylesheet"> 
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent.css"> 
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent-light.css" id="light-stylesheet"> 
+<link rel="stylesheet" href="/web-app/styles/translucent/translucent-dark.css" id="dark-stylesheet"> 
 <style>
     #dvc-tbl {
 width: 100%;
@@ -40,7 +40,8 @@ text-decoration: none;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
+<div id="whats-new-wrapper"></div>
+    <noscript><b style="color: white;" id="no-script">It looks like we've encountered an error (404). Please make sure Javascript is enabled in your browser settings. If you haven't modified your browser settings to disable JavaScript, try reloading the page.</b></noscript>
 <center>
 <table>
 <tr>
@@ -69,10 +70,8 @@ text-decoration: none;
 <script>
 sessionStorage.setItem("last-page","/web-app/pages/help/web-app-help-catogories.html");
 </script>
-<script src="/web-app/scripts/prefs.js"></script>
-<script src="/web-app/scripts/universal-scripts.js"></script>
-<script src="/web-app/scripts/accessibility.js"></script>
-<script src="/web-app/scripts/version-sync.js"></script>
-<script src="/web-app/scripts/visuals.js"></script>
+<script src="/web-app/pages/help/visuals.js"></script>
+<script src="/web-app/pages/help/prefs.js"></script>
+<script src="/web-app/universal-scripts.js"></script>
 </body>
 </html>

@@ -34,7 +34,6 @@ try {document.getElementById(qcs[i]).style.display = 'inline-block';}catch(err){
 try{document.getElementById(qc_checks[i]).checked = true;}catch(err){}
 }}}
 function updateColorPrefs() {
-color_array = "Set null";
 for (i = 0; i < 6; i++) {
 var cur_check = document.getElementsByClassName('color-check')[i].checked;
 if (cur_check == true) {
@@ -43,3 +42,21 @@ console.log(total_bgs[i] + " checked!");
 } 
 }
 }
+var topLevelCheckOptions = ["filterSearch","theme","accessibility","menu","utilities"];
+for (var i = 0; i < topLevelCheckOptions.length; i++) {
+    if (localStorage.getItem(topLevelCheckOptions[i] + 'Prefs') == null) {
+        localStorage.setItem(topLevelCheckOptions[i] + 'Prefs',"[]")
+        var isNull = true;
+    }}
+if (isNull == true) {
+var exsisting_prefs = JSON.parse(localStorage.getItem(topLevelCheck + 'Prefs'));
+for (var i = 0; i < checkboxesInCatogory.length; i++) {
+        if (checkboxesInCatogory[i].checked == true) {
+            checkboxesInCatogory[i].checked = false;
+            exsisting_prefs[i] = false;
+        } else {
+            checkboxesInCatogory[i].checked = true;
+            exsisting_prefs[i] = true;
+        }
+    localStorage.setItem(topLevelCheck + 'Prefs', JSON.stringify(exsisting_prefs));
+}}

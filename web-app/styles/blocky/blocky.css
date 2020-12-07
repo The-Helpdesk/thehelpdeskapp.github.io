@@ -2,13 +2,15 @@
 width: 188px;
 height: inherit;
 }
-    .dflt-bg, .cat-box {
-border-radius: 10px;
+    .dflt-bg, .cat-box, .inpur-bg {
+border-radius: 3px;
 transition: 0.7s;
+margin: 10px;
     }
 .cat-box {
 text-align: center;
 padding: 10px;
+
 }
 body, html {
  font-family: 'Montserrat', sans-serif;
@@ -24,6 +26,7 @@ display: none;
   scrollbar-width: none;
 background-size: cover;
 background-repeat: no-repeat;
+transition: background 0.5s ease;
 /*overflow: none;
 overflow: hidden;*/
 background-image: linear-gradient(to bottom right, #191923, #191923);
@@ -160,7 +163,7 @@ width: 150px;
 width: 10.5vw;
 margin: 0px 0px 7px 0px;
 }
-.dflt-bg {
+.dflt-bg, .input-bg {
 padding: 7px;
 }
 #search-field {
@@ -181,6 +184,17 @@ background: grey;
 margin: 6px 10;
 padding: 10px;
 }
+.fadeObjectIn {
+opacity: 0;
+animation-name: fadeIn;
+animation-duration: 1s;
+animation-delay: 0.5s;
+animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
 #popup-version-number {
 transform: translateX(3%);
 font-weight: 600;
@@ -190,7 +204,6 @@ font-weight: 600;
     height: 100vh;
     float: left;
     border-radius: 0px 15px 15px 0px;
-    background-color: rgba(255,255,255,0.6)
     }
 
     #sidebar {

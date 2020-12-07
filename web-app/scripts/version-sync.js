@@ -1,11 +1,12 @@
 var version_prefix = "v";
 var version_number = "0.21.1";
 var version_suffix = "alpha";
+try {
 if (version_suffix == "") {
 document.getElementById("version").innerHTML = version_prefix + version_number;
 } else {
 document.getElementById("version").innerHTML = version_prefix + version_number + " " + version_suffix;
-}
+}} catch(err) {};
 //Determine the version number displayed and compare that to the previous version number. Show the what's new box if necessary.
 var version_stored = localStorage.getItem('version_stored');
 var whatsnewpage = true;
