@@ -73,7 +73,9 @@ autoTheme();
 } else {
 //Code for if the user has overrided the auto theme
 if (theme_stored == 'dark') {
+try {
 document.getElementById('theme-reset').style.visibility = 'visible';
+} catch(err) {console.log("Item with ID theme-reset not found. Inferred that user preference is set to false for this item.")}
 DarkModeIcons();
 themevar = 'light';
 theme();
