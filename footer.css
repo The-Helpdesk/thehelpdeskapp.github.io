@@ -1,0 +1,27 @@
+
+.styled-footer {
+color: grey;
+}
+.footer-link {
+font-weight: normal;
+color: grey;
+text-decoration: underline;
+}
+hr {
+border: 1px dotted grey;
+width: 100%
+}
+.universal-footer-info-links {
+text-align: right;
+}
+.universal-footer-mini-copyright-disclaimer {
+float: left;
+}
+@media only screen and (max-width: 650px) {
+.universal-footer-info-links {
+text-align: left;
+}
+.universal-footer-mini-copyright-disclaimer {
+float: none;
+}
+}

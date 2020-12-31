@@ -1,0 +1,142 @@
+.card {
+background-color: white;
+height: 400px;
+width: 400px;
+border-radius: 15px;
+padding: 10px;
+margin: 10px;
+float: left;
+}
+body {
+-webkit-overflow-scrolling: touch;
+}
+.card-header {
+font-size: 160%;
+}
+.card-img-wrapper {
+background-color: #eeeeee;
+border-radius: 15px;
+padding: 30px;
+min-height: 140px;
+text-align: center;
+}
+.card-img {
+width: 200px;
+height: auto;
+padding: 10px;
+}
+.card-content {
+padding: 10px;
+white-space: normal;
+}
+.date-description {
+color: orange;
+}
+.txt-img-wrapper {
+font-size: 50px;
+}
+#windows, #enterprise, #mac {
+margin-top: 0;
+}
+.txt-img-div {
+font-size: 200%;
+}
+.card-carousel {
+background: rgba(250,250,250,0.6);
+border-radius: 15px;
+width: 98vw;
+padding: 10px;
+margin: 10px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+.carousel-header {
+font-weight: bold;
+font-size: 160%;
+}
+.carousel-content {
+min-width: 260vw;
+}
+.carousel-scroll-wrapper {
+overflow-x: scroll;
+scroll-snap-type: x mandatory;
+width: 100vw;
+max-height: 400px
+overflow-y: hidden !important;
+
+}
+.card-carousel {
+        background: rgba(5,5,5,0.6);
+    }
+.flex-carousel-content {
+    display: flex;
+}
+.quarter-card {
+width: 22.5vw;
+}
+.card {
+    background-color: black;
+    scroll-snap-align: start;
+}
+.formatted-txt-img {
+    color: black;
+}
+@media only screen and (max-width: 1666px) {
+    .quarter-card {
+   min-width: 10vw;
+    flex: 0 1 auto;
+    }
+    @media only screen and (max-width: 1000px) {
+        .quarter-card {
+        width: auto;
+        max-width: 50vw;
+        max-height: 20vw;
+        }
+        .carousel-content {
+        min-width: 800vw;
+        }
+    }
+    @media only screen and (min-width: 1000px) and (max-width: 1300px) {
+        .quarter-card {
+        min-width: 40vw;
+        max-width: 50vw;
+        }
+    }
+.flex-scroll-wrapper {
+height: auto;
+}
+}
+.quarter-card {
+    height: auto;
+    }
+.animate-card-img {
+position: absolute;
+top: -90px;
+left: 130px;
+animation: fade 15s infinite;
+animation-fill-mode: both;
+width: 15%;
+}
+.no-padding {
+margin-top: 0;
+width: 40%
+}
+#company-values, #app-principles {
+background: #191923;
+width: 200vw;
+}
+
+#values-header, #principles-header {
+color: white;
+}
+.nav-wrapper {
+    text-align: center;
+    align-content: center;
+}
+.active-link {
+background-color: #191923;
+border-radius: 10px;
+}
+#lock-color {
+color: white;
+}

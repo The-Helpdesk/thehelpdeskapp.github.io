@@ -118,105 +118,6 @@ font-weight: 400;
     width: 40%;
     }
 }
-#projects, #comp-values, #app-princip {
-width: 100vw;
-}
-.card {
-background-color: white;
-height: 450px;
-width: 400px;
-border-radius: 15px;
-padding: 10px;
-margin: 10px;
-display: inline-block;
-filter: blur(0px);
-}
-.card-header {
-font-size: 200%;
-}
-.card-img-wrapper {
-height: 40%;
-background-color: #eeeeee;
-border-radius: 15px;
-padding: 10px;
-align-content: center;
-text-align: center;
-}
-.card-img {
-width: 200px;
-height: auto;
-margin-top: 10%
-}
-.card-content {
-padding: 10px;
-white-space: normal;
-}
-.date-description {
-color: orange;
-}
-.card-carousel {
-white-space: nowrap;
-overflow-x: scroll;
-overflow-y: hidden;
-background: rgba(250,250,250,0.6);
-height: 52%;
-border-radius: 15px;
-padding: 10px;
-margin: 10px;
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-}
-#txt-img {
-font-size: 50px;
-}
-#windows, #enterprise, #mac {
-margin-top: 0;
-}
-#ios {
-font-size: 200%;
-margin-top: 7%;
-}
-.carousel-header {
-font-weight: bold;
-font-size: 160%;
-}
-.carousel-content {
-display: flex;
-}
-.flex-card {
-flex-basis: 23%;
-filter: drop-shadow( 0 0 0 lightgrey);
-}
-.no-padding {
-margin-top: 0;
-width: 40%
-}
-#company-values, #app-principles {
-background: #191923;
-}
-#values-header, #principles-header {
-color: white;
-}
-#abt-hero-txt {
-text-shadow: 10px 10px 4px lightgrey;
-}
-#abt-hero-img {
-  filter: drop-shadow( 15px 15px 3px lightgrey);
-}
-footer {
-text-align: center;
-}
-.nav-wrapper {
-    text-align: center;
-    align-content: center;
-}
-.active-link {
-background-color: #191923;
-border-radius: 10px;
-}
-#lock-color {
-color: white;
-}
 @media (prefers-color-scheme: dark) {
     body, html {
     background-color: black;
@@ -244,13 +145,15 @@ color: white;
         text-shadow: none;
         color: white;
         }
-    .card {
-    background-color: black;
-    }
-    #ios-txt-img {
-    color: black;
-    }
-    .card-carousel {
-        background: rgba(5,5,5,0.6);
-    }
+}
+.center {
+text-align: center;
+}
+.hero-txt-caption {
+color: orange;
+font-weight: bold;
+}
+.styled-footer {
+background-color: rgba(20,20,20);
+padding: 10px;
 }
