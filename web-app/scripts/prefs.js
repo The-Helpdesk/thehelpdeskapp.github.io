@@ -34,7 +34,7 @@ try {document.getElementById(qcs[i]).style.display = 'inline-block';}catch(err){
 try{document.getElementById(qc_checks[i]).checked = true;}catch(err){}
 }}}
 function updateColorPrefs() {
-color_array = "Set null";
+var color_array;
 for (i = 0; i < 6; i++) {
 var cur_check = document.getElementsByClassName('color-check')[i].checked;
 if (cur_check == true) {

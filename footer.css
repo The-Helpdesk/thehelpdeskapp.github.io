@@ -25,3 +25,8 @@ text-align: left;
 float: none;
 }
 }
+
+.styled-footer {
+background-color: rgba(20,20,20);
+padding: 10px;
+}

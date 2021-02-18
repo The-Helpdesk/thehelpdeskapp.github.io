@@ -1,0 +1,39 @@
+[{
+    "Mobile" : [{
+        "iPhone" : [{
+            "Hardware" : [{
+                "optionW" : {},
+                "optionX" : {}
+            }],
+            "Connectivity" : [{
+                "Cellular" : [{}],
+                "WiFi" : [{}],
+                "Bluetooth" : [{}]
+            }],
+            "Built-in Apps" : [{
+                "Communication" : [{
+                    "Phone" : [{}],
+                    "FaceTime" : [{}],
+                    "Messages" : [{
+                        "Group Messenging" : [{
+                            "Fix issues with group messenging" : [{
+                                "congrats! u did it" : {}
+                            }],
+                            "Customize Group Threads" : [{}]
+                        }],
+                        "One-on-One Messenging" : [{}],
+                        "iMessage Apps" : [{}]
+                    }],
+                    "Mail" : [{}]
+                }],
+                "Utility" : [{}],
+                "Media" : [{}]
+            }],
+            "Privacy & Security" : [{}],
+            "Software Features" : [{}]
+        }],
+        "Android" : {}
+    
+    }],
+    "Desktop" : [{}]
+}]

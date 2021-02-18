@@ -54,13 +54,15 @@ flex-basis: 80%;
 width: 100vw;
 height: auto;
 display: flex;
-flex-wrap: wrap;
 background-image: url("/media/images/footer-img.png");
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
     }
+#footer-sec, #sec-2 {
+flex-wrap: wrap;
+}
 .link, a {
 text-decoration: none;
 color: black;
@@ -152,8 +154,4 @@ text-align: center;
 .hero-txt-caption {
 color: orange;
 font-weight: bold;
-}
-.styled-footer {
-background-color: rgba(20,20,20);
-padding: 10px;
 }

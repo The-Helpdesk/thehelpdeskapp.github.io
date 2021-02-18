@@ -1,9 +1,10 @@
 <html id="html">
 <head>
-<link rel="stylesheet" href="/web-app/styles/blocky/blocky.css"> 
-<link rel="stylesheet" href="/web-app/styles/blocky/blocky-light.css" id="light-stylesheet"> 
-<link rel="stylesheet" href="/web-app/styles/blocky/blocky-dark.css" id="dark-stylesheet"> 
+<link rel="stylesheet" href="/translucent-test.css"> 
+<link rel="stylesheet" href="/translucent-light-test.css" id="light-stylesheet"> 
+<link rel="stylesheet" href="/translucent-dark-test.css" id="dark-stylesheet"> 
 <style>
+/*
     table {
 table-layout: fixed;
     }
@@ -73,7 +74,7 @@ width: 52px;
     #color-box {
     margin: none;
     }
-
+*/
 </style>
 </head>
 <body id="body">
@@ -175,14 +176,16 @@ var drpdwnvl = document.getElementById('device-selection').value;
                 a.classList = 'stretch txtclring';
                 a.href = "/web-app/pages/help/web-app-article-titles.html"
                 div.appendChild(a)
+                var svg = document.createElement("svg")
+                a.appendChild(svg)
+                var path = document.createElement("path");
+                path.className = "cat-icon";
+                path.src = data[i].img;
+                svg.appendChild(path);
                 var div2 = document.createElement("div");
                 div2.innerHTML = data[i].cat + '<br>';
                 div2.className = 'search-term';
                 a.appendChild(div2)
-                var img = document.createElement("img");
-                img.className = "round-img-corners";
-                img.src = data[i].img;
-                a.appendChild(img);
             }}
     </script>
 <script>

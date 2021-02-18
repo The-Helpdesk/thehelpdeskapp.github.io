@@ -179,9 +179,6 @@ background: grey;
 .group-box {
 margin: 6px 10;
 padding: 10px;
-<<<<<<< Updated upstream:web-app/pages/help/web-app-help-universal-styles.css
-}
-=======
 }
 .fadeObjectIn {
 opacity: 0;
@@ -209,4 +206,3 @@ font-weight: 600;
     #sidebar {
     padding: 10px;
     }
->>>>>>> Stashed changes:web-app/styles/translucent/translucent.css

@@ -61,7 +61,7 @@ min-width: 260vw;
 overflow-x: scroll;
 scroll-snap-type: x mandatory;
 width: 100vw;
-max-height: 400px
+max-height: 400vw;
 overflow-y: hidden !important;
 
 }
@@ -73,6 +73,10 @@ overflow-y: hidden !important;
 }
 .quarter-card {
 width: 22.5vw;
+}
+#projects {
+flex-wrap: nowrap;
+white-space: nowrap;
 }
 .card {
     background-color: black;

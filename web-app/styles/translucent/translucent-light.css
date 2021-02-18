@@ -37,8 +37,6 @@ color: black;
 }
 .close:hover, .close:focus {
 color: black;
-<<<<<<< Updated upstream:web-app/pages/help/web-app-help-universal-styles-light.css
-=======
 }
 /*Accessibility styles that overule regular styles*/
 .reduceTranslucency {
@@ -47,5 +45,4 @@ background: rgba(255, 255, 255) !important;
 }
 .boldFont {
 font-weight: bold !important;
->>>>>>> Stashed changes:web-app/styles/translucent/translucent-light.css
 }
