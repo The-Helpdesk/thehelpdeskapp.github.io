@@ -2,8 +2,8 @@
     "Mobile" : [{
         "iPhone" : [{
             "Hardware" : [{
-                "optionW" : {},
-                "optionX" : {}
+                "External Buttons" : [{}],
+                "Ports" : [{}]
             }],
             "Connectivity" : [{
                 "Cellular" : [{}],
@@ -17,12 +17,23 @@
                     "Messages" : [{
                         "Group Messenging" : [{
                             "Fix issues with group messenging" : [{
-                                "congrats! u did it" : {}
+                                "congrats! u did it" : {},
+                                ":)" : {}
                             }],
-                            "Customize Group Threads" : [{}]
+                            "Customize Group Threads" : [{
+                                "Change the name and photo of a group": [{"ARTICLE": "A0038"}],
+                                "Add or remove people from a group": [{"ARTICLE": "A0038"}],
+                                "Change the name of a group": [{"ARTICLE": "A0038"}]
+                            }],
+                            "Use iMessage Features" : [{
+                                "Reply to messages": [{"ARTICLE": "A0038"}],
+                                "Use Message Effects": [{"ARTICLE": "A004"}]
+                            }]
                         }],
                         "One-on-One Messenging" : [{}],
-                        "iMessage Apps" : [{}]
+                        "iMessage Apps" : [{}],
+                        "Manage Messages" : [{}],
+                        "Change your name and photo" : [{}]
                     }],
                     "Mail" : [{}]
                 }],
@@ -35,5 +46,26 @@
         "Android" : {}
     
     }],
-    "Desktop" : [{}]
+    "Desktop" : [{
+        "Mac" : [{}],
+        "Windows" : [{}]
+    }],
+    "Networking" : [
+        {
+            "Netgear" : [{}],
+            "Linksys" : [{}],
+            "Google" : [{}]
+        }],
+    "Smart TVs" : [{
+        "LG" : [{}],
+        "Vizio" : [{}],
+        "Samsung" : [{}],
+        "Sony" : [{}]
+    }],
+    "Printers" : [{
+        "HP" : [{}],
+        "Canon" : [{}],
+        "Brother" : [{}],
+        "Lexmark" : [{}]
+    }]
 }]

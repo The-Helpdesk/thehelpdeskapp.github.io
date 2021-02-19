@@ -4,6 +4,15 @@
 </head>
     <body>
 <script>
+function Access() {
+var access = window.prompt("It looks like you're trying to access a prerelease version of The Helpdesk. In order to continue, you'll need an access code.");
+if (access != 4032991) {
+Access();
+}
+}
+Access();
+</script>
+<script>
 var optnchc;    
 var optnhvrchc;
 </script>
@@ -17,17 +26,19 @@ var optnhvrchc;
 <div class="prompt-title">Select the best option</div>
 <div class="prompt-subtitle">Most articles can be found multiple ways through the choices.</div>
 </div>
+<div class="optn-cnt-grp-wrapper">
 <div class="content-group" id="optn-cnt-grp">
 <button id="optn-btn-0" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=0;btnhvr();" onclick="optnchc='0';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-0"></div><img class="optn-btn-img" id="optn-btn-img-0"></button><button id="optn-btn-1" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=1;btnhvr();" onclick="optnchc='1';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-1"></div><img class="optn-btn-img" id="optn-btn-img-1"></button><button id="optn-btn-2" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=2;btnhvr();" onclick="optnchc='2';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-2"></div><img class="optn-btn-img" id="optn-btn-img-2"></button><button id="optn-btn-3" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=3;btnhvr();" onclick="optnchc='3';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-3"></div><img class="optn-btn-img" id="optn-btn-img-3"></button><button id="optn-btn-4" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=4;btnhvr();" onclick="optnchc='4';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-4"></div><img class="optn-btn-img" id="optn-btn-img-4"></button><button id="optn-btn-5" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=5;btnhvr();" onclick="optnchc='5';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-5"></div><img class="optn-btn-img" id="optn-btn-img-5"></button><button id="optn-btn-6" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=6;btnhvr();" onclick="optnchc='6';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-6"></div><img class="optn-btn-img" id="optn-btn-img-6"></button><button id="optn-btn-7" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=6;btnhvr();" onclick="optnchc='7';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-7"></div><img class="optn-btn-img" id="optn-btn-img-7"></button><button id="optn-btn-8" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=8;btnhvr();" onclick="optnchc='8';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-8"></div><img class="optn-btn-img" id="optn-btn-img-8"></button><button id="optn-btn-9" class="optn-btn" onmouseout="hvrStp();" onmouseover="optnhvrchc=9;btnhvr();" onclick="optnchc='9';btnupdt();"><div class="optn-btn-ttl" id="optn-btn-ttl-9"></div><img class="optn-btn-img" id="optn-btn-img-9"></button>
-</div>
+    </div></div>
     </div>
 <div class="content-box" id="content-box-2">
 <div class="title-group">
     <div class="prompt-title">Information</div></div>
-<div><b style="font-weight: 600;">Hovering Over: </b><span id="choice-hover-title"></span></div>
-<div><b style="font-weight: 600;">In Hovering Catogory: </b><div id="choice-hover-list"></div></div>
+<div id="hover-title-container"><b style="font-weight: 600;">Hovering Over: </b><span id="choice-hover-title"></span></div>
+<div id="hover-list-container"><b style="font-weight: 600;">In Hovering Catogory: </b><div id="choice-hover-list"></div></div>
 <div><b style="font-weight: 600;">Currently Selected:</b> <span id="choice-title"></span></div>
-<button onclick="findHelpData('cnt')" class="optn-btn">Continue With Selected Choice</button>
+<button onclick="findHelpData('cnt')" class="optn-btn" id="continue-btn">Continue With Selected Choice</button>
+<div id="invalid-choice">Please pick a valid choice</div>
 </div>
     </div>
 <script src="/web-app/scripts/help-page.js"></script>
