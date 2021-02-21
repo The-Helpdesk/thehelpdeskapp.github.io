@@ -4,17 +4,30 @@ var chcs = document.getElementsByClassName("optn-btn-ttl");
 var chcArray = dvc_catogory;
 var iteration = 0;
 for (var i=0; i < chcArray.length; i++) {
-chcs[i].innerHTML = chcArray[i];
+    chcs[i].innerHTML = chcArray[i];
 }
-function btnupdt() {
-var subttleBtnFill = document.getElementById("optn-btn-ttl-" + optnchc).innerHTML;
-document.getElementById("choice-title").innerHTML = subttleBtnFill
+var chcArrayLeft = 12 - chcArray.length;
+for (var i = chcArray.length; i < 10; i++) {
+console.log(i)
+document.getElementById('optn-btn-' + i).className = 'disabled-btn';
 }
-function btnhvr() {
-var hoverBtn = document.getElementById('optn-btn-ttl-' + optnhvrchc).innerHTML;
-if (hoverBtn != '') {
-findHelpData('hover');
+function btnupdt(optnchc) {
+    var subttleBtnFill = document.getElementById("optn-btn-ttl-" + optnchc).innerHTML;
+    if (subttleBtnFill.includes('<br>')) {
+        var splitArray = subttleBtnFill.split('- <br>');
+        subttleBtnFill = splitArray[0] + splitArray[1];
+    }
+    sessionStorage.setItem("subttleBtnFill",subttleBtnFill);
+    document.getElementById("choice-title").innerHTML = subttleBtnFill;
+    document.getElementById("choice-title").className = 'transition-from-hidden-content';
 }
+function btnhvr(optnhvrchc) {
+    clearTimeout(sessionStorage.getItem('hoverTimeout'));
+    var hoverBtn = document.getElementById('optn-btn-ttl-' + optnhvrchc).innerHTML;
+    sessionStorage.setItem("hoverBtn",hoverBtn)
+    if (hoverBtn != '') {
+        findHelpData('hover');
+    }
 }
 function findHelpData(pass) {
 var toDisplay;
@@ -49,9 +62,8 @@ function findValuesHelper(obj, key, list) {
   return list;
 }
 if (pass == 'cnt') {
-var selectedBtn = document.getElementById('optn-btn-ttl-' + optnchc).innerHTML;
+var selectedBtn = sessionStorage.getItem("subttleBtnFill")
     if (selectedBtn == '') {
-        console.log("Selected Button had no value")
         document.getElementById("invalid-choice").className = 'transition-from-hidden-content'; 
             setTimeout(function(){ 
                 document.getElementById("invalid-choice").className = 'invisble-content'; 
@@ -66,11 +78,18 @@ var selectedBtn = document.getElementById('optn-btn-ttl-' + optnchc).innerHTML;
         setTimeout(function() {
             if (keyContent != "ARTICLE") {
                 for (var i=0; i < keyContent.length; i++) {
-                    document.getElementById('optn-btn-ttl-' + i).innerHTML = keyContent[i];
+                    document.getElementById('optn-btn-' + i).className = 'btn';
+                    if (keyContent[i].length > 12 && keyContent[i].includes(' ') == false) {
+                        var splitText = keyContent[i].split(keyContent[i][9]);
+                        document.getElementById('optn-btn-ttl-' + i).innerHTML = splitText[0] + '- <br>'  + keyContent[i][9] + splitText[1];
+                    } else {
+                        document.getElementById('optn-btn-ttl-' + i).innerHTML = keyContent[i];
+                    }
                 }
-                var numOfBoxToClear = 10 - keyContent.length;
+                var numOfBoxToClear = 12 - keyContent.length;
                 for (var i = keyContent.length; i< numOfBoxToClear; i++) {
                     document.getElementById('optn-btn-ttl-' + i).innerHTML = '';
+                    document.getElementById('optn-btn-' + i).className = 'disabled-btn';
                 }
                 document.getElementById("choice-title").innerHTML = '';
             } else {
@@ -83,9 +102,19 @@ var selectedBtn = document.getElementById('optn-btn-ttl-' + optnchc).innerHTML;
             }
         }, 600);
     } else if (pass == 'hover') {
-        var hoverBtn = document.getElementById('optn-btn-ttl-' + optnhvrchc).innerHTML;
+        var hoverBtn = sessionStorage.getItem("hoverBtn");
+         if (hoverBtn.includes('<br>')) {
+        var splitArray = hoverBtn.split('- <br>');
+        hoverBtn = splitArray[0] + splitArray[1];
+         }
         document.getElementById("choice-hover-title").innerHTML = hoverBtn;
         toDisplay = findValues(data, hoverBtn);
+        if (toDisplay == '') {
+            document.getElementById('choice-hover-list').className = 'invisible-content';
+            setTimeout(function() {
+            document.getElementById("choice-hover-list").innerHTML = '';
+            }, 600)
+        } else {
         keyContent = Object.keys(toDisplay[0][0])
         keyContent = keyContent.sort();
         var keyContentSubtract = keyContent.length - 1;
@@ -95,7 +124,7 @@ var selectedBtn = document.getElementById('optn-btn-ttl-' + optnchc).innerHTML;
                 choiceHoverList.innerHTML = choiceHoverList.innerHTML += ', ' + keyContent[i];
             } else if (i == 0) {
                 choiceHoverList.innerHTML = keyContent[i];
-            } else  if (keyContentSubtract == i) {
+            } else if (keyContentSubtract == i) {
                 if (keyContent.length > 2) {
                 choiceHoverList.innerHTML = choiceHoverList.innerHTML += ', & ' + keyContent[i];
                 } else {
@@ -103,16 +132,27 @@ var selectedBtn = document.getElementById('optn-btn-ttl-' + optnchc).innerHTML;
                 }
             }
         }
-document.getElementById("choice-hover-title").className = 'quick-shown-content';
-document.getElementById("choice-hover-list").className = 'quick-shown-content';
-    }
+        document.getElementById("choice-hover-title").className = 'transtion-from-hidden-content';
+        document.getElementById("choice-hover-list").className = 'transition-from-hidden-content';
+    }}
     })
 .catch(function (err) {
     console.log(err);
   });}
 function hvrStp() {
-document.getElementById("choice-hover-title").className = 'quick-invis-content';
-document.getElementById("choice-hover-list").className = 'quick-invis-content';
-document.getElementById("choice-hover-title").innerHTML = '';
-document.getElementById("choice-hover-list").innerHTML = '';
+    var hoverTimeout = setTimeout( function() {
+    document.getElementById("choice-hover-title").className = 'invisible-content';
+    document.getElementById("choice-hover-list").className = 'invisible-content';
+    setTimeout( function() {
+    document.getElementById("choice-hover-title").innerHTML = '';
+    document.getElementById("choice-hover-list").innerHTML = '';
+    }, 600);
+    }, 800);
+    sessionStorage.setItem("hoverTimeout",hoverTimeout);
+}
+function noFocus() {
+document.getElementById("choice-title").className = 'invisible-content';
+setTimeout( function() {
+document.getElementById("choice-title").innerHTML = '';
+}, 600);
 }

@@ -3,125 +3,16 @@
 <link rel="stylesheet" href="setup.css">
 </head>
 <body>
-<script>
-var selectedBtn;
-var choice;
-    </script>
 <div class="ocean">
   <div class="wave"></div>
   <div class="wave"></div>
 </div>
 <div class="setup-wrapper" draggable="false">
     <div class="setup-box">
-        <div id="slide1">
-            <div class="title-group">
-                <div class="prompt-title"> Welcome</div>
-                <div class="prompt-subtitle">Let's get set up.</div>
-            </div>
-                <div class="content" id="first-content">
-                    <button id="simple-setup" class="start-choice" autofocus onclick="choice='SimpleSetup';choiceUpdated();">
-                    <img src="simple.png" style="width: 100%;">
-                    <div class="option-caption">
-                        <div class="option-caption-header">Simple Set Up</div>
-                        <div class="option-caption-recommended">Recommended for most users</div>
-                        <div class="option-caption-content">[Description]</div>
-                    </div>
-                    </button>
-                    <button id="custom-setup" class="start-choice" onclick="choice='CustomSetup';choiceUpdated();">
-                        <img dragable="false" src="custom.png" style="max-width: 100%;">
-                        <div class="option-caption">
-                            <div class="option-caption-header">Custom Set Up</div>
-                            <div class="option-caption-content">This option is recommended for users who want to tightly control their experience of The Helpdesk.</div>
-                        </div>
-                    </button>
-                <span class="continue-container"><button class="continue" onclick="continueSetup()" id="slide1Continue">Continue</button></span>
-                </div>
-        </div>
-        <div id="slide2Custom" class="invisible-content">
-            <div class="content">
-            <div class="choice-content">
-            <div id="themeContent">
-            <div class="title-group">
-            <div class="prompt-title">Appearance</div>
-            <div class="prompt-subtitle">First, let's pick a theme you like.</div>
-            </div>
-                <div id="color-custom-appearance-choice">
-                    <button class="choice" onclick="choice='blue';chooseColor();" id="theme-choice-blue">Blue</button><br>
-                    <button class="choice"onclick="choice='red';chooseColor();">Red</button><br>
-                    <button class="choice" onclick="choice='green';chooseColor();">Green</button><br>
-                    <button class="choice" onclick="choice='purple';chooseColor();">Purple</button><br>
-                    <button class="choice" onclick="choice='black';chooseColor();">Black</button><br>
-                </div>
-                <div id="theme-custom-appearance-choice" class="hidden-content">
-                    <button class="choice" onclick="choice='light';chooseTheme();">Light</button><br>
-                    <button class="choice" onclick="choice='dark';chooseTheme();">Dark</button><br>
-                    <button class="choice" onclick="choice='auto';chooseTheme();" id="auto-theme">Auto (Based on time of day)</button><br>
-                    <button class="choice" onclick="choice='comp-pref';chooseTheme();">Computer Preference (Based on your computer settings)</button>
-                </div>
-            </div>
-            <div id="sidebarChoices" class="hidden-content">
-                <div class="title-group">
-            <div class="prompt-title">Sidebar</div>
-            <div class="prompt-subtitle">Choose to show or hide the sidebar.</div>
-            </div>
-                <div class="sidebarOptions">
-                <button class="choice" onclick="choice='sidebar-show';sidebarChoice();">Show Sidebar</button>
-                <button class="choice" onclivk="choice='sidebar-hide';sidebarChoice();">Hide Sidebar</button>
-                <div class="choice-descrip">
-                You'll be able to customize what controls you see in the sidebar on the next slide.
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="theme-preview-wrapper" id="theme-preview-container">
-                    <div class="preview-title">Preview</div>
-                    <div class="theme-preview" id="theme-preview">
-                    <table id="lg-theme-preview-boxes"></table>
-                    <table id="theme-preview-boxes">
-                    </table>
-                        <div id="auto-theme-disclaimer-wrapper"><div id="auto-theme-disclaimer">(Doesn't actually do this)</div></div>
-                    </div>
-                </div>
-                
-            </div>
-                <span class="continue-container"><button class="continue" onclick="continueSetup()" id="slide2Continue">Continue</button></span>
-            </div>
+
             </div>
         </div>
-    <script>
-    var tr = document.createElement("tr");
-        tr.classList = 'lg-tr';
-    document.getElementById("lg-theme-preview-boxes").appendChild(tr);
-    for (var i = 0; i < 4; i++) {
-    var td = document.createElement("td");
-        tr.appendChild(td);
-    var div = document.createElement("div");
-        div.classList = "tbl-bx lg-tbl-bx";
-        div.innerHTML = "XXXX";
-        td.appendChild(div);
-    }
-  for (var i = 0; i < 28; i++) {
-                
-                var ans = i % 7;
-                if (ans === 0) {
-                var tr = document.createElement("tr");
-                document.getElementById("theme-preview-boxes").appendChild(tr)
-                var td = document.createElement("td");
-                    tr.appendChild(td);
-                var div = document.createElement("div");
-                    div.classList = "tbl-bx";
-                    div.innerHTML = "XXXX";
-                    td.appendChild(div);
-                } else {
-                var td = document.createElement("td");
-                    tr.appendChild(td);
-                var div = document.createElement("div");
-                    div.classList = "tbl-bx";
-                    div.innerHTML = "XXXX";
-                td.appendChild(div);
-                }
-            }
-</script>
+  
     <script src="setup.js"></script>
 </body>
 </html>

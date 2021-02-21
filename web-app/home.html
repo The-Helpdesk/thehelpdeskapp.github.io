@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Web App | The Helpdesk</title>
+<link rel="stylesheet" href="/web-app/styles/universal-styles.css">
+<link rel="stylesheet" href="/web-app/styles/home.css">
+</head>
+<body>
+<div class="ocean" id="ocean">
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+<div class="content-wrapper" id="home-content-wrapper">
+<div class="content-box content-box-in" id="content-box-1">
+<div class="content-animation-wrapper">
+<div class="title-group">
+<div class="prompt-title">Welcome to The Helpdesk</div>
+<div class="prompt-subtitle">Where would you like to go?</div>
+</div>
+
+<div id="btn-container"></div>
+    </div>
+    </div>
+    </div>
+<script>
+var chcArray = ['Help','Tech Dictionary','Computer Picker','Software Report Cards']
+var imgArray = ['help','dictionary','computer-picker','report-card'];
+for (var i = 0; i < 4; i++) {
+var btn = document.createElement("button");
+    btn.setAttribute("id","optn-btn-" + i);
+    btn.setAttribute("class","btn");
+    btn.setAttribute("onclick", "fromHome('" + imgArray[i] + "');");
+    document.getElementById("btn-container").appendChild(btn);
+var img = document.createElement("img");
+    img.setAttribute("class","optn-btn-img")
+    img.setAttribute("id","optn-btn-img-" + i);
+    img.className = 'chcImg';
+    img.src = '/web-app/media/images/homepage-icons/' + imgArray[i] + '.png';
+    btn.appendChild(img);
+var div = document.createElement("div");
+    div.setAttribute("id","optn-btn-ttl-" + i);
+    div.setAttribute("class","optn-btn-ttl")
+    div.innerHTML = chcArray[i];
+    btn.appendChild(div);
+}
+function fromHome(toPage) {
+    console.log("Running")
+    document.getElementsByClassName('ocean')[0].id = 'sink';
+    document.getElementsByClassName('content-animation-wrapper')[0].classList = 'content-transition';
+    document.getElementById('content-box-1').classList = 'content-box content-wrapper-transition';
+    setTimeout(function() {
+        window.open("/web-app/pages/help/help-page.html","_self")
+    },2500)
+}
+</script>
+</body>
+</html>
