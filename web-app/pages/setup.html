@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Setup | The Helpdesk</title>
+<link rel="stylesheet" href="/web-app/styles/universal-styles.css">
+<link rel="stylesheet" href="/web-app/styles/setup.css">
+</head>
+<body>
+
+<div class="ocean" id="ocean">
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+<div class="content-wrapper" id="home-content-wrapper">
+<div class="content-box content-box-in" id="content-box-1">
+<div class="content-animation-wrapper">
+<div class="title-group">
+<div class="prompt-title">👋  Welcome to The Helpdesk<span id="greeting-addon"></span></div>
+<div class="prompt-subtitle">Please select your theme.</div>
+<div class="prompt-subtitle" id="prompt-subtitle-2">Personalized Greeting</div>
+</div>
+<div id="btn-container">
+<button class="btn" onclick="setTheme('light')"><img src="/web-app/media/images/themes/light-theme.png" class="optn-img" alt="Light Theme Image">🌇 Light</button>
+<button class="btn" onclick="setTheme('dark')"><img src="/web-app/media/images/themes/dark-theme.png" class="optn-img" alt="Dark Theme Image">🌃  Dark</button>
+<button class="btn" onclick="setTheme('auto')"><img src="/web-app/media/images/themes/auto-theme.png" class="optn-img" alt="Auto Theme Image">🌄 Auto</button>
+<button id="next-btn" class="btn" onclick="homeNext()">Next</button>
+</div>
+<div id="greeting-container"><br>
+    <div id="greeting-descriptor">If you'd like to, you can type in your first name for a personalized greeting when you visit The Helpdesk. The Helpdesk is not able to see your name if you choose to enter it.</div><br>
+    <span id="name-input-container"><span id="name-input-prefix">My name is </span><input type="text" id="name" oninput="updateGreeting()">.<span id="name-1" class="name-placeholder">Alex</span></span>
+    <div class="next-wrapper"><button id="next-btn-2" class="btn" onclick="homeNext()">Skip</button></div>
+</div>
+    </div>
+    </div>
+    </div>
+<script>
+var onChoice = 0;
+var theme;
+function setTheme(theme) {
+    if (theme == 'light') {
+        document.getElementsByTagName("body")[0].style.backgroundColor = '#ffffff';
+        document.getElementsByTagName("html")[0].style.backgroundColor = '#ffffff';
+        theme = 'light';
+    } else if (theme == 'dark') {
+        document.getElementsByTagName("body")[0].style.backgroundColor = '#191923';
+        document.getElementsByTagName("html")[0].style.backgroundColor = '#191923';
+        theme = 'dark';
+    } else if (theme == 'auto') {
+        theme = 'auto';
+    }
+} 
+function homeNext() {
+    if (onChoice == 0) {
+        localStorage.setItem("theme",theme);
+        document.getElementById("btn-container").style.opacity = 0;
+        document.getElementsByClassName("prompt-subtitle")[0].style.opacity = 0;
+        setTimeout( function() {
+            document.getElementsByClassName("prompt-subtitle")[0].style.display = 'none';
+            document.getElementById("btn-container").style.display = 'none';
+            document.getElementById("greeting-container").style.display = 'grid';
+            document.getElementById("prompt-subtitle-2").style.display = 'inline-block';
+            setTimeout( function() {
+            document.getElementById("greeting-container").style.opacity = 1;
+            document.getElementById("prompt-subtitle-2").style.opacity = 1;
+            }, 10);
+        }, 1000);
+    }
+}
+function updateGreeting() {
+var nameInput = document.getElementById("name").value;
+    if (nameInput != '') {
+        document.getElementById("greeting-addon").innerHTML = ', ' + nameInput;
+        document.getElementById("next-btn-2").innerHTML = 'Next';
+    } else {
+        document.getElementById("greeting-addon").innerHTML = '';
+        document.getElementById("next-btn-2").innerHTML = 'Skip';
+    }
+}
+var onName = 0;
+setInterval( function() {
+    onName++
+    var nameArray = ["Alex", "Andrew", "Brooke", "Carson", "Clay", "Eleanor", "Evelyn", "Jack", "Karen", "Lori", "Lynn", "Mollie", "Ryan", "Susan", "Tom", "Walker", "Zack"]
+    document.getElementById("name-1").innerHTML = nameArray[onName];
+    setTimeout(function() {
+        
+    }, 1000)
+}, 3000)
+</script> 
+</body>
+</html>
