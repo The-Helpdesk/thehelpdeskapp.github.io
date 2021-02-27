@@ -11,7 +11,7 @@
   <div class="wave"></div>
   <div class="wave"></div>
 </div>
-<div class="content-wrapper" id="home-content-wrapper">
+<div class="content-wrapper" id="home-content-wrapper">                 
 <div class="content-box content-box-in" id="content-box-1">
 <div class="content-animation-wrapper">
 <div class="title-group">
@@ -27,7 +27,7 @@
 </div>
 <div id="greeting-container"><br>
     <div id="greeting-descriptor">If you'd like to, you can type in your first name for a personalized greeting when you visit The Helpdesk. The Helpdesk is not able to see your name if you choose to enter it.</div><br>
-    <span id="name-input-container"><span id="name-input-prefix">My name is </span><input type="text" id="name" oninput="updateGreeting()">.<span id="name-1" class="name-placeholder">Alex</span></span>
+    <span id="name-input-container"><span id="name-input-prefix">My name is </span><input type="text" id="name" oninput="updateGreeting()">.<span id="name-placeholder" class="name-placeholder">Alex</span></span>
     <div class="next-wrapper"><button id="next-btn-2" class="btn" onclick="homeNext()">Skip</button></div>
 </div>
     </div>
@@ -77,14 +77,20 @@ var nameInput = document.getElementById("name").value;
     }
 }
 var onName = 0;
+var nameArray = ["Alex", "Andrew", "Brooke", "Carson", "Clay", "Eleanor", "Evelyn", "Jack", "Karen", "Lori", "Lynn", "Mollie", "Ryan", "Susan", "Tom", "Walker", "Zack"];
+    /*
 setInterval( function() {
-    onName++
-    var nameArray = ["Alex", "Andrew", "Brooke", "Carson", "Clay", "Eleanor", "Evelyn", "Jack", "Karen", "Lori", "Lynn", "Mollie", "Ryan", "Susan", "Tom", "Walker", "Zack"]
-    document.getElementById("name-1").innerHTML = nameArray[onName];
-    setTimeout(function() {
-        
+    if (onName == nameArray.length - 1) {
+        onName = 0;
+    } else {
+    onName++;
+    }
+    document.getElementById("name-placeholder").innerHTML = nameArray[onName];
+    document.getElementById("name-placeholder").style.opacity = 1;
+    setTimeout( function() {
+        document.getElementById("name-placeholder").style.opacity = 0;
     }, 1000)
-}, 3000)
+}, 3000)*/
 </script> 
 </body>
 </html>

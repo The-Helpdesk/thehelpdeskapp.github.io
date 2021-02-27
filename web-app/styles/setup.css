@@ -102,3 +102,8 @@ input, .name-placeholder {
     width: 100%;
     text-align: center;
 }
+.name-placeholder {
+    opacity: 0;
+    transition: 1s;
+    width: 200px;
+}
