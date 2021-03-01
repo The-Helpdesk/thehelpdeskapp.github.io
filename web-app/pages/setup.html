@@ -40,13 +40,16 @@ function setTheme(theme) {
     if (theme == 'light') {
         document.getElementsByTagName("body")[0].style.backgroundColor = '#ffffff';
         document.getElementsByTagName("html")[0].style.backgroundColor = '#ffffff';
+        localStorage.setItem("theme","light");
         theme = 'light';
     } else if (theme == 'dark') {
         document.getElementsByTagName("body")[0].style.backgroundColor = '#191923';
         document.getElementsByTagName("html")[0].style.backgroundColor = '#191923';
+        localStorage.setItem("theme","dark");
         theme = 'dark';
     } else if (theme == 'auto') {
         theme = 'auto';
+        localStorage.setItem("theme","auto");
     }
 } 
 function homeNext() {

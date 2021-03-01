@@ -1,0 +1,7 @@
+
+.content-wrapper {
+grid-template-columns: 1fr 22.5vw 45vw 1fr;
+}
+.prompt-subtitle {
+    font-weight: 500;
+}

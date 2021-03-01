@@ -1,0 +1,168 @@
+[{
+    "A" : [{
+        "Apple March Event" : [{
+            "definition" : "The Apple March event is an event that focuses on Services, iPad, or education that occurs every few years."
+        }],
+            "Apple September Event" : [{
+                "definition" : "The Apple September Event is an event that has occurred every year since the early 2010s. Typically at this event we see new iPhones, Apple Watches, new iPads sometimes, and the announcement about the final release of the major OS updates that were announced earlier that year at WWDC. However the 2020 September Event saw the release of new Apple Watches, iPads, Apple One, and Apple Fitness+, but notably, no iPhones."
+            }],
+        "Apple October Event" : [{
+            "definition" : "The Apple October Event is an Apple event that typically focuses on iPads and Macs. The event does not take place every year. The most recent event saw the release of the iPhone 12 lineup in 2020."
+        }]
+    }],
+    "B" : [{
+    
+    }],
+    "C" : [{
+        
+    }],
+    "D" : [{
+        "Data Center" : [{
+            "definition" : "A data center is a building specifically designed for Servers which are stored in Server Racks. Data centers are typically kept at cool temperatures to keep the equipment cool. Data Centers almost always have backup power in case of a power failure."
+        }]
+        
+    }],
+    "E" : [{
+        
+    }],
+    "F" : [{
+        "Facebook" : [{
+            "definition" : "Facebook is an image and video sharing social media site created by Mark Zuckerburg in 2004. Facebook has since become the largest social media platform on the internet. Facebook currently owns Instagram and Whatsapp Recently, Facebook has come under scrutiny about its privacy practices and on its control over the social media industry."
+        }]
+        
+    }],
+    "G" : [{
+        "Google" : [{
+            "definition" : "Google is an American multinational company that was founded in 1998. Google runs one of the world’s largest search engines. Google also created Android, a mobile operating system that runs on millions of phones and tablets around the world and Chromebooks which are lightweight laptops that run on ChromeOS. Some of Google’s many cloud-based services are Google Docs, Google Sheets, Google Slides, Google Forms, & the popular video-sharing service, YouTube. Google also maps the world and displays their maps with Google Maps and Google Earth. Other things Google is known for include Gmail, Google Meet, and Google Drawings."
+        }],
+        "Google Docs" : [{
+            "definition" : "Google Docs is a cloud-based word processing software developed by Google."
+        }],
+        "Google Slides" : [{
+            "definition" : "Google Slides is a cloud-based Presentation creation software developed by Google."
+        }],
+        "Google Sheets" : [{
+            "definition" : "Google Sheets is a spreadsheet creation software developed by Google. Google Sheets can accept file formats from different spreadsheet tools like Excel and input from Google Forms."
+        }],
+        "Google Forms" : [{
+            "definition" : "Google Forms is a form creation software developed by Google. Google forms have the ability to export data to Google Sheets."
+        }],
+        "Google Pixel" : [{
+            "definition" : "Google Pixel, also known as “pixel” is Google’s smartphone lineup. The pixel lineup includes the Pixel, Pixel 2, Pixel 3, Pixel 3a, Pixel 4, and the Pixel 5."
+        }]
+        
+    }],
+    "H" : [{
+        
+    }],
+    "I" : [{
+        
+        "iOS" : [{
+            "definition" : "iOS Apple’s mobile operating system for their smartphone, the iPhone. Every year iOS has one major release that includes major new features. This release typically begins with a developer beta right after WWDC which occurs in June, a public beta in July, followed by a release to the public in September usually after Apple holds their annual September event.",
+            "Releases" : [{
+                "iOS 14" : "iOS 14 is Apple’s most recent major release of iOS. Headlining features of iOS 14 included redesigned widgets, the ability to put widgets on the home screen, the App Library, compact call and Siri interfaces, updates to group chats in Messages and the ability to set default email and browser clients.",
+                "iOS 13" : "iOS 13 is 2019s major release of iOS. Headlining features of iOS 13 included dark mode, a redesigned map for Apple Maps, new privacy features for location, and Sign in with Apple"
+            }]
+        }],
+        "iPadOS" : [{
+            "definition" : "iPadOS is Apple’s  tablet operating system for iPads. In 2019, Apple announced that iPads would run a separate software from iPhones called iPadOS during WWDC. Every year iPadOS has one major release that includes major new features. This release typically begins with a developer beta right after WWDC which occurs in June, a public beta in July, followed by a release to the public in September usually after Apple holds their annual September event."
+        }],
+        "Internet" : [{
+            "definition" : "The internet is a complex network of computers and servers that are all connected and exchange and store information. The internet is connected via wired and wireless methods. Underneath the ocean, cables run connecting the computers and servers across the continents."
+        }],
+        "iPhone 12/iPhone 12 mini" : [{
+            "definition" : "The iPhone 12 is Apple’s latest smartphone, announced in October 2020. The iPhone 12 was released later in October 2020 and the iPhone 12 Mini was released in early November of 2020. Notable enhancements to the iPhone 12 and iPhone 12 Mini included MagSafe, 5G, an A14 chip, and Super Retina XDR displays in both models."
+        }],
+        "iPhone 12 Pro/iPhone 12 Pro Max" : [{
+            "definition" : ""
+        }]
+    }],
+    "J" : [{
+        
+    }],
+    "K" : [{
+        
+    }],
+    "L" : [{
+        "Live Stream" : [{
+            "definition" : "A live stream is a form of broadcasting that occurs during the actual event. This can happen both on television and over the internet. Frequently, content creators on services like YouTube and Twitch will live stream themselves playing video games, reacting to product releases, reviewing products, and just about anything else."
+        }]
+        
+    }],
+    "M" : [{
+        "MacOS" : [{
+            "definition" : "MacOS is Apple’s  desktop operating system for their Macs (Mac Mini, Macbook Air, Macbook Pro 13 inch, Macbook Pro 16 inch, iMac 21.5 inch, iMac 24 inch, iMac Pro, Mac Pro). Every year MacOS has one major release that includes major new features. This release typically begins with a developer beta right after WWDC which occurs in June, a public beta in July, followed by a release to the public in late September or October."
+        }]
+        
+    }],
+    "N" : [{
+        
+    }],
+    "O" : [{
+        "OS" : [{
+            "definition" : "An OS or Operating system is a software program that runs natively on a device which other programs run on top of. Examples are: iOS, Android, Windows, iPadOS, GearOS, WatchOS, Linux, TVOS, & MacOS."
+        }]
+        
+    }],
+    "P" : [{
+        
+    }],
+    "Q" : [{
+        
+    }],
+    "R" : [{
+        
+    }],
+    "S" : [{
+        "Server" : [{
+            "definition" : "A server is a high-end computer that stores files and broadcasts them to the internet, privately or publicly. Servers are typically stored in Server Racks, which are metal boxes where many servers are kept and connected to the internet."
+        }]
+        
+    }],
+    "T" : [{
+        "TVOS" : [{
+            "definition" : "TVOS is Apple’s  smart-tv operating system for the Apple TV. Every year TVOS has one major release that includes major new features. This release typically begins with a developer beta right after WWDC which occurs in June, a public beta in July, followed by a release to the public in September usually after Apple holds their annual September event."
+        }],
+        "Twitch" : [{
+            "definition" : "Twitch is an online live streaming service that allows users to livestream their content. Twitch can be heavily integrated with video games and other software so the audience can make things happen within the stream."
+        }]
+        
+    }],
+    "U" : [{
+        "UI" : [{
+            "definition" : "A UI or User Interface is the interaction between the user and the software.",
+            "sources" : [{"source":"Google via Oxford Languages"}]
+        }],
+        "UX" : [{
+            "definition" : "UX or User Experience is"
+        }]
+        
+    }],
+    "V" : [{
+        
+    }],
+    "W" : [{
+        "WatchOS" : [{
+            "definition" : "WatchOS is Apple’s  watch operating system for the Apple Watch. Every year WatchOS has one major release that includes major new features. This release typically begins with a developer beta right after WWDC which occurs in June, a public beta in July, followed by a release to the public in September usually after Apple holds their annual September event."
+        }],
+        "Website Refresh" : [{
+            "definition" : "A website refresh is when a company releases a product without an event. Website releases are a form of a press release. "
+        }],
+        "WWDC" : [{
+            "definition" : "WWDC or Worldwide Developers Conference, is Apple’s annual developer’s conference which takes place one week every year in June. The conference kicks off with a keynote where Apple announces the next major release of all of their major operating systems iOS, iPadOS, WatchOS, MacOS, & TVOS are released and sometimes a new Mac is released. Throughout the week, various “sessions” are held where developers can learn new coding skills."
+        }]
+        
+    }],
+    "X" : [{
+        
+    }],
+    "Y" : [{
+        "YouTube" : [{
+            "definition" : "YouTube is a popular video-sharing platform developed by Google. YouTube supports both  live streams and pre recorded videos. People who post content on YouTube are referred to as YouTubers. Some of YouTube’s content are things like tutorials, educational videos, reaction videos, gaming videos and streams, and unboxings or new products. YouTube is also used to stream events for big companies like Apple, Samsung, Microsoft, among others."
+        }]
+        
+    }],
+    "Z" : [{
+        
+    }]
+}]
